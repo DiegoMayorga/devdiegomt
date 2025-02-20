@@ -28,6 +28,16 @@ export default function MainNavigation() {
               About me
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/projects"
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+            >
+              Projects
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>
