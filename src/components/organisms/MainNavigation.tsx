@@ -1,43 +1,19 @@
-import { NavLink } from "react-router-dom";
-
+import { NavItem } from "../molecules/NavItem";
 import classes from "../../styles/organisms/MainNavigation.module.scss";
+import { NAV_ITEMS } from "../../config/navigation";
 
 export default function MainNavigation() {
   return (
     <header className={classes.header}>
       <nav>
         <ul className={classes.list}>
-          <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive ? classes.active : undefined
-              }
-              end
-            >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/about-me"
-              className={({ isActive }) =>
-                isActive ? classes.active : undefined
-              }
-            >
-              About me
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/projects"
-              className={({ isActive }) =>
-                isActive ? classes.active : undefined
-              }
-            >
-              Projects
-            </NavLink>
-          </li>
+          {NAV_ITEMS.map((item) => (
+            <li key={item.to}>
+              <NavItem to={item.to} end={item.end}>
+                {item.text}
+              </NavItem>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
