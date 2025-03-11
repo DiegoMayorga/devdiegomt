@@ -1,4 +1,4 @@
-import { NavItem } from "../molecules/NavItem";
+import NavItem from "../molecules/NavItem";
 import classes from "../../styles/organisms/MainNavigation.module.scss";
 import { NAV_ITEMS } from "../../config/navigation";
 
