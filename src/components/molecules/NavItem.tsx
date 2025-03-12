@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import classes from "../../styles/organisms/MainNavigation.module.scss";
 import React from "react";
+import { motion } from "motion/react";
 
 interface NavItemProps {
   to: string;
@@ -10,13 +11,26 @@ interface NavItemProps {
 
 const NavItem: React.FC<NavItemProps> = ({ to, end, children }) => {
   return (
-    <NavLink
-      to={to}
-      className={({ isActive }) => (isActive ? classes.active : undefined)}
-      end={end}
-    >
-      {children}
-    </NavLink>
+    <>
+      <NavLink
+        to={to}
+        className={({ isActive }) => (isActive ? classes.active : undefined)}
+        end={end}
+      >
+        {({ isActive }) => (
+          <div className={classes.navItem}>
+            {children}
+            {isActive && (
+              <motion.div
+                layoutId="tab-indicator"
+                className={classes["active-tab"]}
+                transition={{ type: "spring", stiffness: 500, damping: 30 }}
+              />
+            )}
+          </div>
+        )}
+      </NavLink>
+    </>
   );
 };
 

@@ -15,7 +15,7 @@ import { NAV_ITEMS } from "../../config/navigation";
 export default function MainNavigation() {
   return (
     <header className={classes.header}>
-      <img src={profileImg} alt="Profile image" />
+      <img className={classes.profile} src={profileImg} alt="Profile image" />
       <div className={classes.box}>
         <h1>Diego Mayorga Torres</h1>
         <p>@devdiegomt</p>
@@ -30,14 +30,14 @@ export default function MainNavigation() {
         </div>
         <nav>
           <ul className={classes.list}>
-          {NAV_ITEMS.map((item) => (
-            <li key={item.to}>
-              <NavItem to={item.to} end={item.end}>
-                {item.text}
-              </NavItem>
-            </li>
-          ))}
-        </ul>
+            {NAV_ITEMS.map((item) => (
+              <li key={item.to}>
+                <NavItem to={item.to} end={item.end}>
+                  {item.text}
+                </NavItem>
+              </li>
+            ))}
+          </ul>
         </nav>
       </div>
     </header>

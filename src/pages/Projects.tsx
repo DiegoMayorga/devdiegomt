@@ -4,7 +4,7 @@ import { PROJECT_ITEMS } from "../config/projects"; */
 export default function ProjectsPage() {
   return (
     <>
-      <h1>This is the project page.</h1>
+      {/* <h1>This is the project page.</h1> */}
       {/* <ul>
         {PROJECT_ITEMS.map((item) => (
           <li key={item.id}>

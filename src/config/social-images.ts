@@ -1,5 +1,5 @@
 import linkedinImg from "../assets/images/linkedin.png";
-import githubImg from "../assets/images/github.png";
+import githubImg from "../assets/images/github.webp";
 import figmaImg from "../assets/images/figma.png";
 import gmailImg from "../assets/images/gmail.png";
 
