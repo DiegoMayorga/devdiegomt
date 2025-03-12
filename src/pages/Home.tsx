@@ -1,5 +1,34 @@
 import profileImg from "../assets/images/profile.png";
+import Social from "../components/molecules/Social";
 import classes from "../styles/pages/Home.module.scss";
+
+import linkedinImg from "../assets/images/linkedin.png";
+import githubImg from "../assets/images/github.png";
+import figmaImg from "../assets/images/figma.png";
+import gmailImg from "../assets/images/gmail.png";
+
+const SOCIAL_IMAGES = [
+  {
+    id: "s1",
+    image: linkedinImg,
+    alt: "Linkedin icon",
+  },
+  {
+    id: "s2",
+    image: githubImg,
+    alt: "GitHub icon",
+  },
+  {
+    id: "s3",
+    image: figmaImg,
+    alt: "Figma icon",
+  },
+  {
+    id: "s4",
+    image: gmailImg,
+    alt: "Gmail icon",
+  },
+];
 
 export default function HomePage() {
   return (
@@ -8,6 +37,11 @@ export default function HomePage() {
       <div className={classes.box}>
         <h1>Diego Mayorga Torres</h1>
         <p>@devdiegomt</p>
+        <div className={classes.social}>
+          {SOCIAL_IMAGES.map((social) => (
+            <Social key={social.id} social={social} className={classes.iconBckg} />
+          ))}
+        </div>
       </div>
     </div>
   );
