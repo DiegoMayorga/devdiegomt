@@ -16,5 +16,21 @@
 
   .tech {
     margin-top: 20px;
+    padding: 10px;
+    background-color: rgba($color: #c7c7c7, $alpha: 0.5);
+    align-self: center;
+    width: 100px;
+    border-radius: 10px;
+    display: flex;
+
+    li {
+      list-style: none;
+    }
+
+    img {
+      width: 30px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
   }
 }

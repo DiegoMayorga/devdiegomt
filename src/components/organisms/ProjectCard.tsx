@@ -5,7 +5,12 @@ interface ProjectCardProps {
   image: string;
   title: string;
   description: string;
-  technologies: string;
+  technologies: {
+    id: string;
+    name: string;
+    logo: string;
+    title: string;
+  }[];
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -19,7 +24,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <img src={image} alt={title} />
       <h1>{title}</h1>
       <p>{description}</p>
-      <p className={classes.tech}>{technologies}</p>
+      <ul className={classes.tech}>
+        {technologies.map((tech) => (
+          <li key={tech.id}>
+            <img
+              src={tech.logo}
+              alt={tech.name}
+              title={tech.title}
+            />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
