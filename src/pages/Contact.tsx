@@ -1,7 +1,7 @@
 export default function ContactPage() {
   return (
-    <>
-      {/* <h1>Contact me</h1> */}
-    </>
+    <section>
+      <h1>Contact</h1>
+    </section>
   );
 }

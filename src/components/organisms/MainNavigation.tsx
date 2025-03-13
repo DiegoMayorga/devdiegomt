@@ -17,7 +17,7 @@ export default function MainNavigation() {
     <header className={classes.header}>
       <img className={classes.profile} src={profileImg} alt="Profile image" />
       <div className={classes.box}>
-        <h1>Diego Mayorga Torres</h1>
+        <h2>Diego Mayorga Torres</h2>
         <p>@devdiegomt</p>
         <div className={classes.social}>
           {SOCIAL_IMAGES.map((social) => (

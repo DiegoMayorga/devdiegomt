@@ -2,24 +2,25 @@ import React from "react";
 import classes from "../../styles/organisms/ProjectCard.module.scss";
 
 interface ProjectCardProps {
+  image: string;
   title: string;
   description: string;
   technologies: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
+  image,
   title,
   description,
   technologies,
 }) => {
   return (
-    <section className={classes.section}>
-      <div className={classes.card}>
-        <h1>{title}</h1>
-        <p>{description}</p>
-        <p>{technologies}</p>
-      </div>
-    </section>
+    <div className={classes.card}>
+      <img src={image} alt={title} />
+      <h1>{title}</h1>
+      <p>{description}</p>
+      <p className={classes.tech}>{technologies}</p>
+    </div>
   );
 };
 

@@ -1,7 +1,7 @@
 export default function AboutMe() {
   return (
-    <>
-      {/* <h1>Hello</h1> */}
-    </>
+    <section>
+      <h1>About</h1>
+    </section>
   );
 }

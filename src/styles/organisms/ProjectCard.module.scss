@@ -1,19 +1,20 @@
-/* @use "../variables" as *;
-
-.section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .card {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  margin: 10px;
-  border: 1px solid $gray-600;
-  border-radius: 5px;
-  background-color: $gray-800;
-  color: $gray-200;
+  text-align: center;
+  padding: 40px 0 20px 0;
+  margin: 20px;
+  width: 370px;
+  border-radius: 15px;
+  background-color: rgba($color: #c7c7c7, $alpha: 0.2);
+
+  img {
+    width: 100px;
+    align-self: center;
+    margin-bottom: 25px;
+  }
+
+  .tech {
+    margin-top: 20px;
+  }
 }
- */
