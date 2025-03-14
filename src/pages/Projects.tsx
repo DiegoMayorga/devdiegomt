@@ -15,6 +15,7 @@ export default function ProjectsPage() {
               title={project.title}
               description={project.description}
               technologies={project.technologies}
+              link={project.link}
             />
           </p>
         ))}

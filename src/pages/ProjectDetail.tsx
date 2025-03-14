@@ -7,6 +7,18 @@ export default function ProjectDetailPage() {
     <>
       <h1>A project</h1>
       <p>{params.projectId} page.</p>
+      <p>{params.projectId} page.</p>
+      <p>{params.projectId} page.</p>
+      <p>{params.projectId} page.</p>
+      <p>{params.projectId} page.</p>
+      <p>{params.projectId} page.</p>
+      <p>{params.projectId} page.</p>
+      <p>{params.projectId} page.</p>
+      <p>{params.projectId} page.</p>
+      <p>{params.projectId} page.</p>
+      <p>{params.projectId} page.</p>
+      <p>{params.projectId} page.</p>
+      <p>{params.projectId} page.</p>
     </>
   );
 }

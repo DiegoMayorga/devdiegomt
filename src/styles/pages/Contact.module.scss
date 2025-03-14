@@ -6,7 +6,17 @@
     margin-bottom: 25px;
   }
 
+  .disabled {
+    justify-self: center;
+    margin-bottom: 15px;
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
   .form {
+    margin-bottom: 20px;
+
     input {
       width: 100%;
       padding: 12px 20px;
@@ -36,10 +46,10 @@
         padding: 12px 20px;
         border-radius: 8px;
         box-sizing: border-box;
-        background-color: #FFB729;
+        background-color: #a19c93;
         color: white;
         font-size: 16px;
-        cursor: pointer;
+        /* cursor: pointer; */
       }
     }
   }

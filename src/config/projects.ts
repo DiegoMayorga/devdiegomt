@@ -20,6 +20,7 @@ export const PROJECT_ITEMS = [
             { id: "t2", name: "React logo", logo: reactLogo, title: "React" },
         ],
         image: tictactoeImg,
+        link: "https://dmt-tictactoe.vercel.app/"
     },
     {
         id: "p2",
@@ -30,6 +31,7 @@ export const PROJECT_ITEMS = [
             { id: "t4", name: "React logo", logo: reactLogo, title: "React" },
         ],
         image: mundoGatunoImg,
+        link: "https://mundogatuno.vercel.app/"
     },
     {
         id: "p3",
@@ -40,6 +42,7 @@ export const PROJECT_ITEMS = [
             { id: "t6", name: "React logo", logo: reactLogo, title: "React" },
         ],
         image: schoolImg,
+        link: ""
     },
     {
         id: "p4",
@@ -50,5 +53,6 @@ export const PROJECT_ITEMS = [
             { id: "t8", name: "React logo", logo: reactLogo, title: "React" },
         ],
         image: foodiesImg,
+        link: ""
     },
 ];

@@ -13,9 +13,9 @@ const Input: React.FC<InputProps> = ({ label, name, type, textarea }) => {
       </p>
       <p>
         {textarea ? (
-          <textarea name={name} placeholder={label} required />
+          <textarea name={name} placeholder={label} required disabled/>
         ) : (
-          <input type={type} name={name} placeholder={label} required />
+          <input type={type} name={name} placeholder={label} required disabled/>
         )}
       </p>
     </>

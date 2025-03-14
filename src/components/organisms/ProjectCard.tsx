@@ -12,6 +12,7 @@ interface ProjectCardProps {
     logo: string;
     title: string;
   }[];
+  link: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -19,10 +20,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   description,
   technologies,
+  link,
 }) => {
   return (
     <div className={classes.card}>
-      <img src={image} alt={title} />
+      <a href={link}>
+        <img src={image} alt={title} />
+      </a>
       <h1 className={classes["project-name"]}>{title}</h1>
       <p>
         {description} <Link to="/projects/:projectId">Ver más</Link>
