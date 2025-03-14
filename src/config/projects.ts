@@ -9,6 +9,8 @@ import mundoGatunoImg from "../assets/projects-images/mundo-gatuno.png";
 
 import javascriptLogo from "../assets/techs/javascript.png";
 import reactLogo from "../assets/techs/react.png";
+import typescriptLogo from "../assets/techs/typescript.png";
+import nextLogo from "../assets/techs/next.png";
 
 export const PROJECT_ITEMS = [
     {
@@ -25,10 +27,12 @@ export const PROJECT_ITEMS = [
     {
         id: "p2",
         title: "Mundo Gatuno",
-        description: "A description",
+        description: "I developed Mundo Gatuno, an e-commerce platform designed to simplify the purchase and delivery of cat products.",
         technologies: [
             { id: "t3", name: "JavaScript logo", logo: javascriptLogo, title: "JavaScript" },
             { id: "t4", name: "React logo", logo: reactLogo, title: "React" },
+            { id: "t5", name: "TypeScript logo", logo: typescriptLogo, title: "TypeScript" },
+            { id: "t6", name: "NextJS logo", logo: nextLogo, title: "NextJS" },
         ],
         image: mundoGatunoImg,
         link: "https://mundogatuno.vercel.app/"
@@ -36,10 +40,10 @@ export const PROJECT_ITEMS = [
     {
         id: "p3",
         title: "School platform",
-        description: "A description",
+        description: "I developed a subscription-based school platform that centralizes and manages all the needs of the school community.",
         technologies: [
-            { id: "t5", name: "JavaScript logo", logo: javascriptLogo, title: "JavaScript" },
-            { id: "t6", name: "React logo", logo: reactLogo, title: "React" },
+            { id: "t7", name: "JavaScript logo", logo: javascriptLogo, title: "JavaScript" },
+            { id: "t8", name: "React logo", logo: reactLogo, title: "React" },
         ],
         image: schoolImg,
         link: ""
@@ -47,12 +51,13 @@ export const PROJECT_ITEMS = [
     {
         id: "p4",
         title: "Foodies",
-        description: "A description",
+        description: "I developed Foodies, a platform that connects food lovers with exclusive deals, restaurants, and personalized culinary experiences.",
         technologies: [
-            { id: "t7", name: "JavaScript logo", logo: javascriptLogo, title: "JavaScript" },
-            { id: "t8", name: "React logo", logo: reactLogo, title: "React" },
+            { id: "t9", name: "JavaScript logo", logo: javascriptLogo, title: "JavaScript" },
+            { id: "t10", name: "React logo", logo: reactLogo, title: "React" },
+            { id: "t11", name: "NextJS logo", logo: nextLogo, title: "NextJS" },
         ],
         image: foodiesImg,
-        link: ""
+        link: "https://foodies-nextproject.vercel.app/"
     },
 ];

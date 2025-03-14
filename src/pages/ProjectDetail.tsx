@@ -1,24 +1,12 @@
-import { useParams } from "react-router-dom";
+/* import { useParams } from "react-router-dom"; */
 
 export default function ProjectDetailPage() {
-  const params = useParams();
+  /* const params = useParams(); */
 
   return (
     <>
-      <h1>A project</h1>
-      <p>{params.projectId} page.</p>
-      <p>{params.projectId} page.</p>
-      <p>{params.projectId} page.</p>
-      <p>{params.projectId} page.</p>
-      <p>{params.projectId} page.</p>
-      <p>{params.projectId} page.</p>
-      <p>{params.projectId} page.</p>
-      <p>{params.projectId} page.</p>
-      <p>{params.projectId} page.</p>
-      <p>{params.projectId} page.</p>
-      <p>{params.projectId} page.</p>
-      <p>{params.projectId} page.</p>
-      <p>{params.projectId} page.</p>
+      {/* <h1>A project</h1>
+      <p>{params.projectId} page.</p> */}
     </>
   );
 }

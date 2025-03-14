@@ -29,7 +29,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </a>
       <h1 className={classes["project-name"]}>{title}</h1>
       <p>
-        {description} <Link to="/projects/:projectId">Ver más</Link>
+        {description} <Link to={`/projects/${title}`}>Ver más</Link>
       </p>
       <ul className={classes.tech}>
         {technologies.map((tech) => (
