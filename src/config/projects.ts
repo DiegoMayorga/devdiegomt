@@ -14,7 +14,7 @@ export const PROJECT_ITEMS = [
     {
         id: "p1",
         title: "Tic Tac Toe",
-        description: "A description",
+        description: "A ReactJS-based Tic-Tac-Toe game using functional components and state management to track turns and determine winners.",
         technologies: [
             { id: "t1", name: "JavaScript logo", logo: javascriptLogo, title: "JavaScript" },
             { id: "t2", name: "React logo", logo: reactLogo, title: "React" },

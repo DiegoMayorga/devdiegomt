@@ -2,16 +2,20 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 40px 0 20px 0;
+  padding: 30px 30px 20px;
   margin: 20px;
   width: 370px;
   border-radius: 15px;
   background-color: rgba($color: #c7c7c7, $alpha: 0.2);
-
+  
   img {
     width: 100px;
     align-self: center;
     margin-bottom: 25px;
+  }
+
+  .project-name {
+    margin-bottom: 15px;
   }
 
   .tech {

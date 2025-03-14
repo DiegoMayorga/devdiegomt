@@ -1,5 +1,6 @@
-h1 {
-  margin-bottom: 35px;
+.title {
+  justify-self: center;
+  margin-bottom: 25px;
 }
 
 .cards {
@@ -13,11 +14,11 @@ h1 {
   .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "p1 p2"
-    "p3 p4"
-    "p5 p6";
+    grid-template-rows: 1fr 1fr /* 1fr */;
+    grid-template-areas:
+      "p1 p2"
+      "p3 p4";
+      /* "p5 p6"; */
   }
 }
 
@@ -37,11 +38,11 @@ h1 {
   grid-area: p4;
 }
 
-.p5 {
+/* .p5 {
   grid-area: p5;
 }
 
 .p6 {
   grid-area: p6;
 }
-
+ */
