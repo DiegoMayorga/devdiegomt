@@ -9,6 +9,10 @@
   border-radius: 15px;
   background-color: rgba($color: #c7c7c7, $alpha: 0.2);
   
+  &:hover {
+    background-color: rgba($color: #c7c7c7, $alpha: 0.3);
+  }
+  
   img {
     width: 100px;
     align-self: center;

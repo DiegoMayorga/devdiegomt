@@ -40,6 +40,10 @@
         margin: 20px 10px 0;
         cursor: pointer;
 
+        &:hover {
+          background-color: rgb(217, 217, 217, 25%);
+        }
+
         img {
           margin: 10px;
           border-radius: 0;
@@ -61,6 +65,10 @@
       a {
         text-decoration: none;
         color: white;
+
+        &:hover {
+          color: #ffb829;
+        }
       }
 
       .active-tab {

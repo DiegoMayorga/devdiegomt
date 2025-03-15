@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 type SocialProps = {
   className: string;
   social: {
@@ -10,11 +12,11 @@ type SocialProps = {
 
 const Social: React.FC<SocialProps> = ({ className, social }) => {
   return (
-    <div className={className}>
+    <motion.div whileHover={{ scale: 1.1}} className={className}>
       <a href={social.href}>
         <img src={social.image} alt={social.alt} />
       </a>
-    </div>
+    </motion.div>
   );
 };
 

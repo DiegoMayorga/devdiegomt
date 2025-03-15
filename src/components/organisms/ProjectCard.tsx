@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "../../styles/organisms/ProjectCard.module.scss";
 /* import { Link } from "react-router-dom"; */
+import { motion } from "motion/react";
 
 interface ProjectCardProps {
   image: string;
@@ -23,7 +24,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   link,
 }) => {
   return (
-    <div className={classes.card}>
+    <motion.div
+      whileHover={{ scale: [1, 0.9, 1], transition: { duration: 0.5 } }}
+      className={classes.card}
+    >
       <a href={link}>
         <img src={image} alt={title} />
       </a>
@@ -38,7 +42,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </li>
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 };
 
