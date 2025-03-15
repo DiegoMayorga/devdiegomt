@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "../../styles/organisms/ProjectCard.module.scss";
-import { Link } from "react-router-dom";
+/* import { Link } from "react-router-dom"; */
 
 interface ProjectCardProps {
   image: string;
@@ -29,7 +29,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </a>
       <h1 className={classes["project-name"]}>{title}</h1>
       <p>
-        {description} <Link to={`/projects/${title}`}>Ver más</Link>
+        {description} {/* <Link to={`/projects/${title}`}>Ver más</Link> */}
       </p>
       <ul className={classes.tech}>
         {technologies.map((tech) => (

@@ -10,11 +10,11 @@ export default function ContactPage() {
         <Input type="text" name="contactName" label="Name" />
         <Input type="email" name="contactEmail" label="Email" />
         <Input type="textarea" name="message" label="Message" textarea={true} />
-        <p className={classes["form-actions"]}>
+        <div className={classes["form-actions"]}>
           <button type="submit" disabled>
             Submit
           </button>
-        </p>
+        </div>
       </form>
     </section>
   );
