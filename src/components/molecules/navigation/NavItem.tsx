@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 interface NavItemProps {
   to: string;
   end?: boolean;
-  children: React.ReactNode;
+  children: string;
 }
 
 const NavItem: React.FC<NavItemProps> = ({ to, end, children }) => {
@@ -22,6 +22,7 @@ const NavItem: React.FC<NavItemProps> = ({ to, end, children }) => {
             {children}
             {isActive && (
               <motion.div
+                data-testid="tab-indicator"
                 layoutId="tab-indicator"
                 className={classes["active-tab"]}
                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
