@@ -1,50 +1,68 @@
-# React + TypeScript + Vite
+# 🚀 Mi Portafolio - React + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es el código fuente de mi portafolio profesional, desarrollado con **React**, **TypeScript** y **React Router DOM**. Aquí muestro mis proyectos, experiencia y habilidades en desarrollo de software.
 
-Currently, two official plugins are available:
+## 📌 Tecnologías Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** - Biblioteca para construir interfaces de usuario.
+- **TypeScript** - Superset de JavaScript con tipado estático.
+- **React Router DOM** - Manejo de rutas y navegación dentro de la aplicación.
+- **Styled Components / Tailwind CSS** *(opcional)* - Para estilización.
+- **Vite** *(opcional)* - Como herramienta de construcción y desarrollo.
 
-## Expanding the ESLint configuration
+## 📂 Estructura del Proyecto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+📦 mi-portafolio
+├── 📂 src
+│   ├── 📂 components   # Componentes reutilizables
+│   ├── 📂 pages        # Páginas principales del sitio
+│   ├── 📂 assets       # Imágenes, iconos, etc.
+│   ├── 📂 styles       # Estilos globales
+│   ├── 📂 router       # Configuración de rutas
+│   ├── main.tsx        # Punto de entrada principal
+│   ├── App.tsx         # Componente raíz
+├── 📜 package.json     # Dependencias y scripts
+├── 📜 tsconfig.json    # Configuración de TypeScript
+├── 📜 README.md        # Documentación del proyecto
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 📦 Instalación y Configuración
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Clonar el repositorio**
+   ```bash
+   git clone https://github.com/tu-usuario/mi-portafolio.git
+   cd mi-portafolio
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. **Instalar dependencias**
+   ```bash
+   npm install
+   ```
+
+3. **Ejecutar en modo desarrollo**
+   ```bash
+   npm run dev
+   ```
+
+4. **Construir para producción**
+   ```bash
+   npm run build
+   ```
+
+## 🌐 Rutas Principales
+
+| Ruta        | Descripción |
+|------------|------------|
+| `/`        | Página de inicio |
+| `/about`   | Sobre mí |
+| `/projects` | Mis proyectos |
+| `/contact`  | Formulario de contacto |
+
+## 📌 Próximas Mejoras
+
+- Agregar **animaciones** para una mejor experiencia de usuario.
+- Optimizar **SEO** y accesibilidad.
+- Implementar **modo oscuro**.
+
+💡 **¿Tienes algún comentario o sugerencia?** ¡Contáctame en [Gmail](mailto:devdiegomt@gmail.com)!
