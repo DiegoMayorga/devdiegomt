@@ -31,8 +31,8 @@ Este es el código fuente de mi portafolio profesional, desarrollado con **React
 
 1. **Clonar el repositorio**
    ```bash
-   git clone https://github.com/tu-usuario/mi-portafolio.git
-   cd mi-portafolio
+   git clone https://github.com/diegomayorga/devdiegomt.git
+   cd devdiegomt
    ```
 
 2. **Instalar dependencias**
