@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import classes from "../../styles/organisms/MainNavigation.module.scss";
+import classes from "../../organisms/navigation/MainNavigation.module.scss";
 import React from "react";
 import { motion } from "motion/react";
 

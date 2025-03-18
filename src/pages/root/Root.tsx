@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
-import MainNavigation from "../components/organisms/MainNavigation";
-
-import classes from "../styles/pages/Root.module.scss";
+import classes from "./Root.module.scss";
+import MainNavigation from "../../components/organisms/navigation/MainNavigation";
 
 export default function RootLayout() {
   return (

@@ -1,7 +1,7 @@
-import ProjectCard from "../components/organisms/ProjectCard";
-import { PROJECT_ITEMS } from "../config/projects";
+import ProjectCard from "../../components/organisms/project-card/ProjectCard";
+import { PROJECT_ITEMS } from "../../config/projects";
 
-import classes from "../styles/pages/Projects.module.scss";
+import classes from "./Projects.module.scss";
 
 export default function ProjectsPage() {
   return (

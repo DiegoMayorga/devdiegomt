@@ -1,6 +1,5 @@
 import React from "react";
-import classes from "../../styles/organisms/ProjectCard.module.scss";
-/* import { Link } from "react-router-dom"; */
+import classes from "./ProjectCard.module.scss";
 import { motion } from "motion/react";
 
 interface ProjectCardProps {
@@ -25,7 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <motion.div
-      whileHover={{ scale: [1, 0.9, 1], transition: { duration: 0.5 } }}
+      whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
       className={classes.card}
     >
       <a href={link}>

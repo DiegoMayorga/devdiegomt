@@ -1,16 +1,16 @@
 // Image
-import profileImg from "../../assets/images/profile.png";
+import profileImg from "../../../assets/images/profile.png";
 
 // Components
-import Social from "../molecules/Social";
-import NavItem from "../molecules/NavItem";
+import Social from "../../molecules/social/Social";
+import NavItem from "../../molecules/navigation/NavItem";
 
 // Styles
-import classes from "../../styles/organisms/MainNavigation.module.scss";
+import classes from "./MainNavigation.module.scss";
 
 // Data
-import { SOCIAL_IMAGES } from "../../config/social-images";
-import { NAV_ITEMS } from "../../config/navigation";
+import { SOCIAL_IMAGES } from "../../../config/social-images";
+import { NAV_ITEMS } from "../../../config/navigation";
 
 export default function MainNavigation() {
   return (

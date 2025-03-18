@@ -1,5 +1,5 @@
-import Input from "../components/atoms/Input";
-import classes from "../styles/pages/Contact.module.scss";
+import Input from "../../components/atoms/input/Input";
+import classes from "./Contact.module.scss";
 
 export default function ContactPage() {
   return (
@@ -7,9 +7,9 @@ export default function ContactPage() {
       <h1>Contact</h1>
       <p className={classes.disabled}>Disabled. Send me an email.</p>
       <form className={classes.form}>
-        <Input type="text" name="contactName" label="Name" />
-        <Input type="email" name="contactEmail" label="Email" />
-        <Input type="textarea" name="message" label="Message" textarea={true} />
+        <Input type="text" name="contactName" label="Name" disabled />
+        <Input type="email" name="contactEmail" label="Email" disabled />
+        <Input name="message" label="Message" textarea disabled />
         <div className={classes["form-actions"]}>
           <button type="submit" disabled>
             Submit

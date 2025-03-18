@@ -1,4 +1,4 @@
-import MainNavigation from "../components/organisms/MainNavigation";
+import MainNavigation from "../../components/organisms/navigation/MainNavigation";
 
 export default function ErrorPage() {
   return (
