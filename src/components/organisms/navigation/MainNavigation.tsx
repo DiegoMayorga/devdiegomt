@@ -7,6 +7,7 @@ import NavItem from "../../molecules/navigation/NavItem";
 
 // Styles
 import classes from "./MainNavigation.module.scss";
+import { motion } from "framer-motion";
 
 // Data
 import { SOCIAL_IMAGES } from "../../../config/social-images";
@@ -17,7 +18,22 @@ export default function MainNavigation() {
     <header className={classes.header}>
       <img className={classes.profile} src={profileImg} alt="Profile image" />
       <div className={classes.box}>
-        <h2>Diego Mayorga Torres</h2>
+        <h2>
+          {[..."Diego Mayorga Torres"].map((char, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.1,
+                delay: index * 0.1,
+              }}
+              style={char === " " ? { display: "inline-block", width: "8px" } : {}}
+            >
+              {char}
+            </motion.span>
+          ))}
+        </h2>
         <p>@devdiegomt</p>
         <div className={classes.social}>
           {SOCIAL_IMAGES.map((social) => (

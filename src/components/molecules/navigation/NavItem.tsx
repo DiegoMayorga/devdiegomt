@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import classes from "../../organisms/navigation/MainNavigation.module.scss";
 import React from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 interface NavItemProps {
   to: string;
