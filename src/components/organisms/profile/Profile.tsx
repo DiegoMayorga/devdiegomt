@@ -1,4 +1,4 @@
-import { EDUCATION, EXPERIENCE } from "../../../config/profile";
+import { CERTIFICATIONS, EDUCATION, EXPERIENCE } from "../../../config/profile";
 import classes from "./Profile.module.scss";
 import umbLogo from "../../../assets/edu/umb.png";
 
@@ -40,6 +40,24 @@ export default function Profile() {
               <p>{exp.period}</p>
               <p>{exp.role}</p>
               <p><strong>Skills:</strong> {exp.skills}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <hr />
+      <h3>Certifications</h3>
+      <ul className={classes.certifications}>
+        {CERTIFICATIONS.map((crt) => (
+          <li className={classes["crt-li"]} key={crt.id}>
+            <img
+              className={classes["crt-img"]}
+              src={crt.img}
+              alt={`${crt.place} logo`}
+            />
+            <div className={classes["crt-content"]}>
+              <h4>{crt.name}</h4>
+              <p>{crt.place}</p>
+              <p>{crt.year}</p>
             </div>
           </li>
         ))}
