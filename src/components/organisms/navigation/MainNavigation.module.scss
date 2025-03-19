@@ -1,28 +1,42 @@
+.quote {
+  position: absolute;
+  top: 0;
+  margin-top: 15px;
+  color: white;
+
+  p {
+    text-align: center;
+    font-family: monospace;
+  }
+}
+
 .header {
   display: flex;
-  justify-content: center;
-  margin-top: 8rem;
-  position: relative;
-  height: 450px;
-
-  .profile {
-    border-radius: 30px;
-    height: 180px;
-    box-shadow: 2px;
-    z-index: 1;
-  }
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12rem;
+  height: 362px;
 
   .box {
-    margin-top: 100px;
     height: 350px;
     width: 370px;
     border-radius: 15px;
-    position: absolute;
+    position: relative;
     background: linear-gradient(#2f3d59, #0b1326);
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
+
+    .profile {
+      position: absolute;
+      top: -90px;
+      border-radius: 30px;
+      height: 180px;
+      width: 180px;
+      z-index: 1;
+      gap: 2px;
+    }
 
     h2 {
       margin-top: 7rem;

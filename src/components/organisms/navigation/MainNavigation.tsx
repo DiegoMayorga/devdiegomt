@@ -13,11 +13,26 @@ import { motion } from "framer-motion";
 import { SOCIAL_IMAGES } from "../../../config/social-images";
 import { NAV_ITEMS } from "../../../config/navigation";
 
+// Custom Hook
+import { useDailyQuoute } from "../../../hooks/useDailyQuote";
+
 export default function MainNavigation() {
+  const { dailyQuote, loading, error } = useDailyQuoute();
+
   return (
     <header className={classes.header}>
-      <img className={classes.profile} src={profileImg} alt="Profile image" />
+      <div className={classes.quote}>
+        {loading && <p>Loading...</p>}
+        {error && <p>Error: {error}</p>}
+        {dailyQuote && (
+          <p>
+            "{dailyQuote.quote}" - {dailyQuote.author}
+            {/*  {dailyQuote.category} */}
+          </p>
+        )}
+      </div>
       <div className={classes.box}>
+        <img className={classes.profile} src={profileImg} alt="Profile image" />
         <h2>
           {[..."Diego Mayorga Torres"].map((char, index) => (
             <motion.span
@@ -28,7 +43,9 @@ export default function MainNavigation() {
                 duration: 0.1,
                 delay: index * 0.1,
               }}
-              style={char === " " ? { display: "inline-block", width: "8px" } : {}}
+              style={
+                char === " " ? { display: "inline-block", width: "8px" } : {}
+              }
             >
               {char}
             </motion.span>
