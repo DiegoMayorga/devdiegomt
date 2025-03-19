@@ -62,7 +62,7 @@ export const CERTIFICATIONS = [
     {
         id: "c1",
         img: udemyLogo,
-        name: "React - Complete Gudie",
+        name: "React - Complete Guide",
         place: "Udemy",
         year: "2025",
     },
