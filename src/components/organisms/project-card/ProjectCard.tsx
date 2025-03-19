@@ -31,7 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <img src={image} alt={title} />
       </a>
       <h1 className={classes["project-name"]}>{title}</h1>
-      <p>
+      <p className={classes.description}>
         {description} {/* <Link to={`/projects/${title}`}>Ver más</Link> */}
       </p>
       <ul className={classes.tech}>

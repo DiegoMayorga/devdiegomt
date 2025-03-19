@@ -38,7 +38,7 @@ export default function MainNavigation() {
       </div>
       <div className={classes.box}>
         <img className={classes.profile} src={profileImg} alt="Profile image" />
-        <h2>
+        <h2 aria-label="Diego Mayorga Torres">
           {[..."Diego Mayorga Torres"].map((char, index) => (
             <motion.span
               key={index}

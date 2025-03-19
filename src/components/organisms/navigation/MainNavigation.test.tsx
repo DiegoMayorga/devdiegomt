@@ -55,7 +55,9 @@ describe("MainNavigation", () => {
       "src",
       expect.stringContaining("profile.png")
     );
-    expect(screen.getByText(/Diego Mayorga Torres/i)).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /Diego Mayorga Torres/i })
+    ).toBeInTheDocument();
     expect(screen.getByText(/@devdiegomt/i)).toBeInTheDocument();
   });
 

@@ -9,7 +9,7 @@ export default function ProjectsPage() {
       <h1 className={classes.title}>Projects</h1>
       <div className={classes.cards}>
         {PROJECT_ITEMS.map((project) => (
-          <div key={project.id} className={classes[`projects ${project.id}`]}>
+          <div key={project.id} className={classes[project.id]}>
             <ProjectCard
               image={project.image}
               title={project.title}
