@@ -12,13 +12,13 @@ export const EDUCATION = [
     {
         id: "e1",
         title: "Software Engineering",
-        place: "Universidad Manuela Beltrán",
+        place: "Manuela Beltrán University",
         period: "2017 - 2024",
     },
     {
         id: "e2",
         title: "Digital Marketing Diploma",
-        place: "Universidad Manuela Beltrán",
+        place: "Manuela Beltrán University",
         period: "2024",
     },
 ];

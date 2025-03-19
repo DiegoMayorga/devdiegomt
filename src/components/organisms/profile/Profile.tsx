@@ -1,6 +1,9 @@
 import { CERTIFICATIONS, EDUCATION, EXPERIENCE } from "../../../config/profile";
 import classes from "./Profile.module.scss";
 import umbLogo from "../../../assets/edu/umb.png";
+import Experience from "../../molecules/experience/Experience";
+import Education from "../../molecules/education/Education";
+import Certifications from "../../molecules/certifications/Certifications";
 
 export default function Profile() {
   return (
@@ -17,11 +20,7 @@ export default function Profile() {
         />
         <ul>
           {EDUCATION.map((edu) => (
-            <li key={edu.id}>
-              <h4>{edu.title}</h4>
-              <p>{edu.place}</p>
-              <p>{edu.period}</p>
-            </li>
+            <Education key={edu.id} edu={edu} />
           ))}
         </ul>
       </div>
@@ -29,37 +28,14 @@ export default function Profile() {
       <h3>Work experience</h3>
       <ul className={classes.experience}>
         {EXPERIENCE.map((exp) => (
-          <li className={classes["exp-li"]} key={exp.id}>
-            <img
-              className={classes["work-img"]}
-              src={exp.img}
-              alt={`${exp.name} logo`}
-            />
-            <div className={classes["work-content"]}>
-              <h4>{exp.name}</h4>
-              <p>{exp.period}</p>
-              <p>{exp.role}</p>
-              <p><strong>Skills:</strong> {exp.skills}</p>
-            </div>
-          </li>
+          <Experience key={exp.id} exp={exp} />
         ))}
       </ul>
       <hr />
       <h3>Certifications</h3>
       <ul className={classes.certifications}>
         {CERTIFICATIONS.map((crt) => (
-          <li className={classes["crt-li"]} key={crt.id}>
-            <img
-              className={classes["crt-img"]}
-              src={crt.img}
-              alt={`${crt.place} logo`}
-            />
-            <div className={classes["crt-content"]}>
-              <h4>{crt.name}</h4>
-              <p>{crt.place}</p>
-              <p>{crt.year}</p>
-            </div>
-          </li>
+          <Certifications key={crt.id} crt={crt} />
         ))}
       </ul>
     </div>

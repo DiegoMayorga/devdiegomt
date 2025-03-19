@@ -16,7 +16,7 @@
   h3 {
     margin: 20px 0 0;
   }
-
+  
   .edu {
     display: flex;
     align-items: center;
@@ -48,66 +48,11 @@
     margin-top: 10px;
     padding-left: 0;
     list-style-type: none;
-
-    .exp-li {
-      background-color: rgba($color: #c7c7c7, $alpha: 0.4);
-      padding: 10px;
-      border-radius: 15px;
-      margin: 20px 0;
-      display: flex;
-      align-items: center;
-
-      &:nth-child(3n) {
-        .work-img {
-          height: 38px;
-        }
-      }
-
-      .work-img {
-        width: 150px;
-      }
-
-      .work-content {
-        margin-left: 10px;
-        align-items: center;
-      }
-
-      &:hover {
-        background-color: rgba($color: #c7c7c7, $alpha: 0.3);
-      }
-    }
   }
 
   .certifications {
     padding-left: 0;
     list-style-type: none;
-
-    .crt-li {
-      padding: 15px;
-      background-color: rgba($color: #c7c7c7, $alpha: 0.4);
-      border-radius: 15px;
-      margin: 30px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      .crt-img {
-        width: 150px;
-      }
-
-      .crt-content {
-        margin-left: 10px;
-        align-items: center;
-      }
-
-      &:hover {
-        background-color: rgba($color: #c7c7c7, $alpha: 0.3);
-      }
-
-      &:last-of-type {
-        margin-bottom: 10px;
-      }
-    }
   }
 }
 
