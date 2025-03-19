@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 12rem;
+  margin-top: 14rem;
   height: 362px;
 
   .box {
@@ -35,7 +35,6 @@
       height: 180px;
       width: 180px;
       z-index: 1;
-      gap: 2px;
     }
 
     h2 {
@@ -45,8 +44,10 @@
     }
 
     .social {
+      margin-top: 12px;
       display: flex;
       flex-direction: row;
+      height: 72px;
 
       .iconBckg {
         background-color: rgb(217, 217, 217, 20%);
@@ -67,7 +68,7 @@
     }
 
     .list {
-      margin-top: 40px;
+      margin-top: 30px;
       display: flex;
       gap: 1rem;
       list-style-type: none;
