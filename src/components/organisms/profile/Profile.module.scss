@@ -113,13 +113,7 @@
 
 @media (min-width: 1200px) {
   .profile {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 30px 30px 20px;
-    margin: 20px;
-    width: 800px;
-    min-height: 400px;
+    width: 500px;
     border-radius: 15px;
     background-color: rgba($color: #c7c7c7, $alpha: 0.2);
 
@@ -136,9 +130,12 @@
   }
 
   .edu {
+    flex-direction: column;
     justify-content: center;
+    align-self: center;
     padding: 20px;
     margin-bottom: 20px;
+    width: 400px;
   }
 
   hr {

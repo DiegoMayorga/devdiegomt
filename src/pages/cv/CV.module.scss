@@ -1,0 +1,25 @@
+.title {
+  justify-self: center;
+  margin-bottom: 25px;
+}
+
+.cv {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px 30px 20px;
+  margin: 20px;
+  width: 370px;
+  border-radius: 15px;
+  background-color: rgba($color: #c7c7c7, $alpha: 0.2);
+
+  a {
+    img {
+      width: 200px;
+    }
+  }
+
+  &:hover {
+    background-color: rgba($color: #c7c7c7, $alpha: 0.3);
+  }
+}
