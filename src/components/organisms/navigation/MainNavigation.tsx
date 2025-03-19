@@ -25,10 +25,15 @@ export default function MainNavigation() {
         {loading && <p>Loading...</p>}
         {error && <p>Error: {error}</p>}
         {dailyQuote && (
-          <p>
+          <motion.p
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 1,
+            }}
+          >
             "{dailyQuote.quote}" - {dailyQuote.author}
-            {/*  {dailyQuote.category} */}
-          </p>
+          </motion.p>
         )}
       </div>
       <div className={classes.box}>
