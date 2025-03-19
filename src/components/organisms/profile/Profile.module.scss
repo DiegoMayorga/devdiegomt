@@ -23,9 +23,11 @@
     margin-top: 30px;
     background-color: rgba($color: #c7c7c7, $alpha: 0.4);
     border-radius: 15px;
+    padding: 15px 0;
 
     .umb-img {
-      width: 150px;
+      width: 120px;
+      margin: 0 5px;
     }
 
     ul {
