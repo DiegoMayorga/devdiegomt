@@ -10,9 +10,9 @@ export const NAV_ITEMS = [
         text: "Projects",
     },
     {
-        to: "/about-me",
+        to: "/cv",
         end: false,
-        text: "About",
+        text: "CV",
     },
     {
         to: "/contact",
