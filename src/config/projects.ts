@@ -35,7 +35,7 @@ export const PROJECT_ITEMS = [
             { id: "t6", name: "NextJS logo", logo: nextLogo, title: "NextJS" },
         ],
         image: mundoGatunoImg,
-        link: "https://mundogatuno.vercel.app/"
+        link: ""
     },
     {
         id: "p3",
@@ -58,6 +58,6 @@ export const PROJECT_ITEMS = [
             { id: "t11", name: "NextJS logo", logo: nextLogo, title: "NextJS" },
         ],
         image: foodiesImg,
-        link: "https://foodies-nextproject.vercel.app/"
+        link: ""
     },
 ];
