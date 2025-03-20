@@ -20,78 +20,130 @@
   height: 362px;
 
   .box {
+    // updating to grid
+    border-radius: 15px;
     height: 350px;
     width: 370px;
-    border-radius: 15px;
-    position: relative;
     background: linear-gradient(#2f3d59, #0b1326);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    place-items: center;
+    grid-template-areas:
+      "bx1 p1 bx2"
+      "bx3 bx3 bx3"
+      "bx4 bx4 bx4"
+      "bx5 bx5 bx5";
 
-    .profile {
-      position: absolute;
-      top: -90px;
-      border-radius: 30px;
-      height: 180px;
-      width: 180px;
-      z-index: 1;
-    }
-
-    h2 {
-      margin-top: 7rem;
-      font-weight: 600;
-      font-size: x-large;
-    }
-
-    .social {
-      margin-top: 12px;
+    .p1 {
+      grid-area: p1;
+      background: radial-gradient(
+          circle at top left,
+          #f37261 -15%,
+          transparent 33%
+        ),
+        linear-gradient(to top, #842cf2 -15%, transparent 15%) #000000;
+      background-attachment: fixed;
+      height: 100px;
+      width: 210px;
       display: flex;
-      flex-direction: row;
-      height: 72px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      justify-content: center;
 
-      .iconBckg {
-        background-color: rgb(217, 217, 217, 20%);
-        border-radius: 5px;
-        margin: 20px 10px 0;
-        cursor: pointer;
-
-        &:hover {
-          background-color: rgb(217, 217, 217, 25%);
-        }
-
+      .profile {
         img {
-          margin: 10px;
-          border-radius: 0;
-          width: 30px;
+          height: 190px;
+          width: 190px;
+          border-radius: 30px;
+        }
+        position: absolute;
+        top: 125px;
+        border-radius: 30px;
+      }
+    }
+
+    .bx1 {
+      grid-area: bx1;
+    }
+
+    .bx2 {
+      grid-area: bx2;
+    }
+
+    .bx3 {
+      height: 60px;
+      grid-area: bx3;
+      justify-items: center;
+
+      h2 {
+        margin-top: 14px;
+        font-weight: 600;
+        font-size: x-large;
+      }
+    }
+
+    .bx4 {
+      grid-area: bx4;
+      .social {
+        margin-top: 12px;
+        display: flex;
+        height: 72px;
+
+        .iconBckg {
+          background-color: rgb(217, 217, 217, 20%);
+          border-radius: 5px;
+          margin: 20px 10px 0;
+          cursor: pointer;
+
+          &:hover {
+            background-color: rgb(217, 217, 217, 25%);
+          }
+
+          img {
+            margin: 10px;
+            border-radius: 0;
+            width: 30px;
+          }
         }
       }
     }
 
-    .list {
-      margin-top: 30px;
-      display: flex;
-      gap: 1rem;
-      list-style-type: none;
-      padding: 0;
+    .bx5 {
+      grid-area: bx5;
+      height: 94px;
+      .list {
+        margin-top: 30px;
+        display: flex;
+        gap: 1rem;
+        list-style-type: none;
+        padding: 0;
 
-      font-weight: 400;
-      font-size: medium;
+        font-weight: 400;
+        font-size: medium;
 
-      a {
-        text-decoration: none;
-        color: white;
+        a {
+          text-decoration: none;
+          color: white;
 
-        &:hover {
-          color: #ffb829;
+          &:hover {
+            color: #ffb829;
+          }
+        }
+
+        .active-tab {
+          border: 1.5px solid #ffb829;
+          border-radius: 8px;
         }
       }
-
-      .active-tab {
-        border: 1.5px solid #ffb829;
-        border-radius: 8px;
-      }
     }
+
+    /* border-radius: 15px; */
+    /* position: relative; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
   }
 }
