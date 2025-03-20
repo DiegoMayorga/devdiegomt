@@ -15,7 +15,7 @@ import nextLogo from "../assets/techs/next.png";
 export const PROJECT_ITEMS = [
     {
         id: "p1",
-        title: "Tic Tac Toe",
+        title: "Tic Tac Toe (Desktop)",
         description: "A ReactJS-based Tic-Tac-Toe game using functional components and state management to track turns and determine winners.",
         technologies: [
             { id: "t1", name: "JavaScript logo", logo: javascriptLogo, title: "JavaScript" },
