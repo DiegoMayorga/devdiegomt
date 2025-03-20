@@ -27,9 +27,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
       className={classes.card}
     >
-      <a href={link} target="_blank" rel="noopener noreferrer">
+      {link !== "" ? (
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <img src={image} alt={title} />
+        </a>
+      ) : (
         <img src={image} alt={title} />
-      </a>
+      )}
       <h1 className={classes["project-name"]}>{title}</h1>
       <p className={classes.description}>
         {description} {/* <Link to={`/projects/${title}`}>Ver más</Link> */}
