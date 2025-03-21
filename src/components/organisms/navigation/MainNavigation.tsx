@@ -4,6 +4,7 @@ import profileImg from "../../../assets/images/profile.png";
 // Components
 import Social from "../../molecules/social/Social";
 import NavItem from "../../molecules/navigation/NavItem";
+import Quotes from "../../molecules/quotes/Quotes";
 
 // Styles
 import classes from "./MainNavigation.module.scss";
@@ -13,31 +14,12 @@ import { motion } from "framer-motion";
 import { SOCIAL_IMAGES } from "../../../config/social-images";
 import { NAV_ITEMS } from "../../../config/navigation";
 
-// Custom Hook
-import { useDailyQuoute } from "../../../hooks/useDailyQuote";
-
 export default function MainNavigation() {
-  const { dailyQuote, loading, error } = useDailyQuoute();
 
   return (
     <header className={classes.header}>
-      <div className={classes.quote}>
-        {loading && <p>Loading...</p>}
-        {error && <p>Error: {error}</p>}
-        {dailyQuote && (
-          <motion.p
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 1,
-            }}
-          >
-            "{dailyQuote.quote}" - {dailyQuote.author}
-          </motion.p>
-        )}
-      </div>
+      <Quotes />
       <div className={classes.box}>
-        <div className={classes.bx1}></div>
         <div className={classes.p1}>
           <div className={classes.profile}>
             <img
@@ -46,7 +28,6 @@ export default function MainNavigation() {
             />
           </div>
         </div>
-        <div className={classes.bx2}></div>
         <div className={classes.bx3}>
           <h2 aria-label="Diego Mayorga Torres">
             {[..."Diego Mayorga Torres"].map((char, index) => (

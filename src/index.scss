@@ -18,3 +18,17 @@ body {
       $background-100;
   background-attachment: fixed;
 }
+
+@media (max-width: 1200px) {
+  body {
+    margin: 0;
+    background: radial-gradient(
+        circle at top left,
+        $background-200 -15%,
+        transparent 33%
+      ),
+      linear-gradient(to top, $background-100 -15%, transparent 15%)
+        $background-100;
+    background-attachment: fixed;
+  }
+}

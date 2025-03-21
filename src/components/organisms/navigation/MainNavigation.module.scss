@@ -1,17 +1,3 @@
-.quote {
-  position: absolute;
-  top: 0;
-  margin-top: 15px;
-  color: white;
-
-  p {
-    text-align: center;
-    justify-self: center;
-    font-family: monospace;
-    width: 90%;
-  }
-}
-
 .header {
   display: flex;
   flex-direction: column;
@@ -63,14 +49,6 @@
         top: 125px;
         border-radius: 30px;
       }
-    }
-
-    .bx1 {
-      grid-area: bx1;
-    }
-
-    .bx2 {
-      grid-area: bx2;
     }
 
     .bx3 {
