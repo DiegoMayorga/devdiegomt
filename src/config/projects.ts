@@ -4,6 +4,7 @@ import tictactoeImg from "../assets/projects-images/three-in-line.webp";
 import challengesImg from "../assets/projects-images/challenges.png";
 import schoolImg from "../assets/projects-images/school.png";
 import mundoGatunoImg from "../assets/projects-images/mundo-gatuno.png";
+import bookImg from "../assets/projects-images/book.png";
 
 // Project logos
 
@@ -13,6 +14,7 @@ import typescriptLogo from "../assets/techs/typescript.png";
 /* import nextLogo from "../assets/techs/next.png"; */
 import tailwindLogo from "../assets/techs/tailwind.png";
 import framerLogo from "../assets/techs/framer.png";
+import firebaseLogo from "../assets/techs/firebase.png";
 
 export const PROJECT_ITEMS = [
   {
@@ -105,12 +107,35 @@ export const PROJECT_ITEMS = [
       { id: "t12", name: "React logo", logo: reactLogo, title: "React" },
       {
         id: "t13",
-        name: "NextJS logo",
+        name: "Framer Motion logo",
         logo: framerLogo,
         title: "Framer Motion",
       },
     ],
     image: challengesImg,
     link: "https://challenges-ebon.vercel.app/",
+  },
+  {
+    id: "p5",
+    title: "Books Cart",
+    description:
+      "An app built with Redux that allows users to add books to their cart and view their cart contents. Firebase to handle the backend.",
+    technologies: [
+      {
+        id: "t14",
+        name: "JavaScript logo",
+        logo: javascriptLogo,
+        title: "JavaScript",
+      },
+      { id: "t15", name: "React logo", logo: reactLogo, title: "React" },
+      {
+        id: "t16",
+        name: "Firebase logo",
+        logo: firebaseLogo,
+        title: "Firebase",
+      },
+    ],
+    image: bookImg,
+    link: "https://bookscart-redux.vercel.app/",
   },
 ];
