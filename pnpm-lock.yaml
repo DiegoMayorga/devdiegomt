@@ -17,6 +17,9 @@ importers:
       '@vercel/speed-insights':
         specifier: ^1.2.0
         version: 1.2.0(react@19.1.0)
+      framer-motion:
+        specifier: ^12.10.1
+        version: 12.10.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       motion:
         specifier: ^12.4.11
         version: 12.10.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
