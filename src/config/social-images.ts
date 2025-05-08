@@ -20,7 +20,7 @@ export const SOCIAL_IMAGES = [
     id: "s3",
     image: figmaImg,
     alt: "Figma icon",
-    href: "https://www.figma.com/files/team/1101288856553805647/project/55251532/Team-project?fuid=1083565092992569514",
+    href: "https://www.figma.com/@devdiegomt",
   },
   {
     id: "s4",
