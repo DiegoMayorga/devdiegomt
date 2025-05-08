@@ -7,6 +7,7 @@ import ProjectsPage from "./pages/projects/Projects";
 import ContactPage from "./pages/contact/Contact";
 import ErrorPage from "./pages/error/Error";
 import ProjectDetailPage from "./pages/projects/ProjectDetail";
+import { FormspreeProvider } from "@formspree/react";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,9 @@ const router = createBrowserRouter([
 export default function App() {
   return (
     <>
-      <RouterProvider router={router} />
+      <FormspreeProvider>
+        <RouterProvider router={router} />
+      </FormspreeProvider>
       <Analytics />
     </>
   );

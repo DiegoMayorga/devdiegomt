@@ -1,11 +1,10 @@
-import { motion } from "framer-motion";
-
 type InputProps = {
   label: string;
   name: string;
   type?: string;
   textarea?: boolean;
   disabled?: boolean;
+  required?: boolean;
 };
 
 const Input: React.FC<InputProps> = ({
@@ -14,16 +13,15 @@ const Input: React.FC<InputProps> = ({
   type,
   textarea,
   disabled,
+  required,
   ...props
 }) => {
-  const motionProps = {
-    whileHover: { x: [0, 10, -10, 0] },
-    transition: { duration: 0.5 },
+  const inputProps = {
     id: name,
     name,
     placeholder: label,
     disabled,
-    required: !disabled,
+    required,
   };
 
   return (
@@ -32,9 +30,9 @@ const Input: React.FC<InputProps> = ({
         <label>
           {label}
           {textarea ? (
-            <motion.textarea {...motionProps} {...props} />
+            <textarea {...inputProps} {...props} />
           ) : (
-            <motion.input {...motionProps} type={type} {...props} />
+            <input {...inputProps} type={type} {...props} />
           )}
         </label>
       </p>
