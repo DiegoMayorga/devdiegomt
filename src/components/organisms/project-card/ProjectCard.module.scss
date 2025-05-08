@@ -13,7 +13,12 @@
     background-color: rgba($color: #c7c7c7, $alpha: 0.3);
   }
 
-  img {
+  &__link {
+    display: flex;
+    justify-content: end;
+  }
+
+  .card__project-img {
     width: 100px;
     align-self: center;
     margin-bottom: 25px;

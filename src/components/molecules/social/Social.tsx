@@ -12,8 +12,8 @@ type SocialProps = {
 
 const Social: React.FC<SocialProps> = ({ className, social }) => {
   return (
-    <motion.div whileHover={{ scale: 1.1}} className={className}>
-      <a href={social.href}>
+    <motion.div whileHover={{ scale: 1.1 }} className={className}>
+      <a href={social.href} target="_blank" rel="noopener noreferrer">
         <img src={social.image} alt={social.alt} />
       </a>
     </motion.div>

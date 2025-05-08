@@ -1,7 +1,7 @@
 // Project images
 
 import tictactoeImg from "../assets/projects-images/three-in-line.webp";
-import foodiesImg from "../assets/projects-images/foodies.png";
+import challengesImg from "../assets/projects-images/challenges.png";
 import schoolImg from "../assets/projects-images/school.png";
 import mundoGatunoImg from "../assets/projects-images/mundo-gatuno.png";
 
@@ -10,8 +10,9 @@ import mundoGatunoImg from "../assets/projects-images/mundo-gatuno.png";
 import javascriptLogo from "../assets/techs/javascript.png";
 import reactLogo from "../assets/techs/react.png";
 import typescriptLogo from "../assets/techs/typescript.png";
-import nextLogo from "../assets/techs/next.png";
+/* import nextLogo from "../assets/techs/next.png"; */
 import tailwindLogo from "../assets/techs/tailwind.png";
+import framerLogo from "../assets/techs/framer.png";
 
 export const PROJECT_ITEMS = [
   {
@@ -50,7 +51,12 @@ export const PROJECT_ITEMS = [
         logo: typescriptLogo,
         title: "TypeScript",
       },
-      { id: "t6", name: "NextJS logo", logo: nextLogo, title: "NextJS" },
+      {
+        id: "t6",
+        name: "Tailwind CSS logo",
+        logo: tailwindLogo,
+        title: "Tailwind CSS",
+      },
     ],
     image: mundoGatunoImg,
     link: "https://mundogatuno.vercel.app/",
@@ -59,7 +65,7 @@ export const PROJECT_ITEMS = [
     id: "p3",
     title: "School platform",
     description:
-      "I developed a subscription-based school platform that centralizes and manages all the needs of the school community.",
+      "A subscription-based school platform that centralizes and manages all the needs of the school community. It is a PWA.",
     technologies: [
       {
         id: "t7",
@@ -67,9 +73,15 @@ export const PROJECT_ITEMS = [
         logo: javascriptLogo,
         title: "JavaScript",
       },
-      { id: "t8", name: "React logo", logo: reactLogo, title: "React" },
       {
-        id: "t9",
+        id: "t8",
+        name: "Typescript logo",
+        logo: typescriptLogo,
+        title: "Typescript",
+      },
+      { id: "t9", name: "React logo", logo: reactLogo, title: "React" },
+      {
+        id: "t10",
         name: "Tailwind logo",
         logo: tailwindLogo,
         title: "Tailwind",
@@ -80,20 +92,25 @@ export const PROJECT_ITEMS = [
   },
   {
     id: "p4",
-    title: "Foodies",
+    title: "Challenges",
     description:
-      "I developed Foodies, a platform that connects food lovers with exclusive deals, restaurants, and personalized culinary experiences.",
+      "Challenges is an app focused on UI design and animations using React and Framer Motion.",
     technologies: [
       {
-        id: "t10",
+        id: "t11",
         name: "JavaScript logo",
         logo: javascriptLogo,
         title: "JavaScript",
       },
-      { id: "t11", name: "React logo", logo: reactLogo, title: "React" },
-      { id: "t12", name: "NextJS logo", logo: nextLogo, title: "NextJS" },
+      { id: "t12", name: "React logo", logo: reactLogo, title: "React" },
+      {
+        id: "t13",
+        name: "NextJS logo",
+        logo: framerLogo,
+        title: "Framer Motion",
+      },
     ],
-    image: foodiesImg,
-    link: "",
+    image: challengesImg,
+    link: "https://challenges-ebon.vercel.app/",
   },
 ];
