@@ -15,37 +15,23 @@ import typescriptLogo from "../assets/techs/typescript.png";
 import tailwindLogo from "../assets/techs/tailwind.png";
 import framerLogo from "../assets/techs/framer.png";
 import firebaseLogo from "../assets/techs/firebase.png";
+import vitestLogo from "../assets/techs/vitest.svg";
+import expressLogo from "../assets/techs/express.png";
+import nodeLogo from "../assets/techs/mongo.png";
 
 export const PROJECT_ITEMS = [
   {
     id: "p1",
-    title: "Tic Tac Toe (Desktop)",
-    description:
-      "A ReactJS-based Tic-Tac-Toe game using functional components and state management to track turns and determine winners.",
-    technologies: [
-      {
-        id: "t1",
-        name: "JavaScript logo",
-        logo: javascriptLogo,
-        title: "JavaScript",
-      },
-      { id: "t2", name: "React logo", logo: reactLogo, title: "React" },
-    ],
-    image: tictactoeImg,
-    link: "https://dmt-tictactoe.vercel.app/",
-  },
-  {
-    id: "p2",
     title: "Mundo Gatuno",
     description:
       "I developed Mundo Gatuno, an e-commerce platform designed to simplify the purchase and delivery of cat products.",
     technologies: [
-      {
+      /*       {
         id: "t3",
         name: "JavaScript logo",
         logo: javascriptLogo,
         title: "JavaScript",
-      },
+        }, */
       { id: "t4", name: "React logo", logo: reactLogo, title: "React" },
       {
         id: "t5",
@@ -55,26 +41,44 @@ export const PROJECT_ITEMS = [
       },
       {
         id: "t6",
+        name: "Node JS logo",
+        logo: nodeLogo,
+        title: "Node JS",
+      },
+      {
+        id: "t6-1",
         name: "Tailwind CSS logo",
         logo: tailwindLogo,
         title: "Tailwind CSS",
+      },
+      {
+        id: "t6-2",
+        name: "Vitest logo",
+        logo: vitestLogo,
+        title: "Vitest",
+      },
+      {
+        id: "t6-3",
+        name: "Express logo",
+        logo: expressLogo,
+        title: "Express JS",
       },
     ],
     image: mundoGatunoImg,
     link: "https://mundogatuno.vercel.app/",
   },
   {
-    id: "p3",
+    id: "p2",
     title: "School platform",
     description:
       "A subscription-based school platform that centralizes and manages all the needs of the school community. It is a PWA.",
     technologies: [
-      {
-        id: "t7",
-        name: "JavaScript logo",
-        logo: javascriptLogo,
-        title: "JavaScript",
-      },
+      /*       {
+          id: "t7",
+          name: "JavaScript logo",
+          logo: javascriptLogo,
+          title: "JavaScript",
+          }, */
       {
         id: "t8",
         name: "Typescript logo",
@@ -91,6 +95,23 @@ export const PROJECT_ITEMS = [
     ],
     image: schoolImg,
     link: "https://schoolpt.vercel.app/",
+  },
+  {
+    id: "p3",
+    title: "Tic Tac Toe (Desktop)",
+    description:
+      "A ReactJS-based Tic-Tac-Toe game using functional components and state management to track turns and determine winners.",
+    technologies: [
+      {
+        id: "t1",
+        name: "JavaScript logo",
+        logo: javascriptLogo,
+        title: "JavaScript",
+      },
+      { id: "t2", name: "React logo", logo: reactLogo, title: "React" },
+    ],
+    image: tictactoeImg,
+    link: "https://dmt-tictactoe.vercel.app/",
   },
   {
     id: "p4",
