@@ -48,12 +48,20 @@ describe("ProjectCard", () => {
     });
   });
 
-  test("renders link with correct href and security attributes", () => {
+  test("renders links (icon and image) with correct href and security attributes", () => {
     render(<ProjectCard {...mockProps} />);
 
-    const link = screen.getByRole("link");
-    expect(link).toHaveAttribute("href", mockProps.link);
-    expect(link).toHaveAttribute("target", "_blank");
-    expect(link).toHaveAttribute("rel", "noopener noreferrer");
+    const links = screen.getAllByRole("link");
+    expect(links).toHaveLength(2);
+    for (const link of links) {
+      expect(link).toHaveAttribute("href", mockProps.link);
+      expect(link).toHaveAttribute("target", "_blank");
+      expect(link).toHaveAttribute("rel", "noopener noreferrer");
+    }
+  });
+
+  test("renders no links when the project has no live URL", () => {
+    render(<ProjectCard {...mockProps} link="" />);
+    expect(screen.queryByRole("link")).not.toBeInTheDocument();
   });
 });

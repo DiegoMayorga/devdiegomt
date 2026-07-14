@@ -47,15 +47,15 @@ describe("Input Component", () => {
     expect(textarea).not.toHaveAttribute("type");
   });
 
-  test("input is required when 'disabled' is false", () => {
-    render(<Input label="Phone" name="phone" type="tel" />);
+  test("input is required when the 'required' prop is set", () => {
+    render(<Input label="Phone" name="phone" type="tel" required />);
     const input = screen.getByLabelText("Phone");
 
     expect(input).toBeRequired();
   });
 
-  test("input is not required when 'disabled' is true", () => {
-    render(<Input label="Age" name="age" type="number" disabled />);
+  test("input is not required by default", () => {
+    render(<Input label="Age" name="age" type="number" />);
     const input = screen.getByLabelText("Age");
 
     expect(input).not.toBeRequired();
