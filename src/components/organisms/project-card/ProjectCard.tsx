@@ -1,69 +1,71 @@
 import React from "react";
 import classes from "./ProjectCard.module.scss";
 import { motion } from "framer-motion";
-import redirectIcon from "../../../assets/icons/redirect.png";
 
 interface ProjectCardProps {
   image: string;
   title: string;
   description: string;
-  technologies: {
-    id: string;
-    name: string;
-    logo: string;
-    title: string;
-  }[];
-  link: string;
+  stack: string[];
+  demoUrl?: string;
+  repoUrl?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   image,
   title,
   description,
-  technologies,
-  link,
+  stack,
+  demoUrl,
+  repoUrl,
 }) => {
   return (
-    <motion.div
-      whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+    <motion.article
+      whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
       className={classes.card}
     >
-      {link !== "" && (
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href={link}
-          className={classes["card__link"]}
-        >
-          <img src={redirectIcon} alt="redirect icon" />
-        </a>
-      )}
-      {link !== "" ? (
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          <img
-            src={image}
-            alt={title}
-            className={classes["card__project-img"]}
-          />
-        </a>
-      ) : (
-        <img src={image} alt={title} className={classes["card__project-img"]} />
-      )}
-      <h1 className={classes["project-name"]}>{title}</h1>
+      <img
+        src={image}
+        alt={`${title} screenshot`}
+        className={classes.cover}
+        width={800}
+        height={450}
+        loading="lazy"
+      />
+      <h2 className={classes.title}>{title}</h2>
       <p className={classes.description}>{description}</p>
-      <ul className={classes.tech}>
-        {technologies.map((tech) => (
-          <li key={tech.id}>
-            <img
-              src={tech.logo}
-              alt={tech.name}
-              title={tech.title}
-              role="img"
-            />
+      <ul className={classes.stack} aria-label={`${title} tech stack`}>
+        {stack.map((tech) => (
+          <li key={tech} className={classes.chip}>
+            {tech}
           </li>
         ))}
       </ul>
-    </motion.div>
+      {(demoUrl || repoUrl) && (
+        <div className={classes.links}>
+          {demoUrl && (
+            <a
+              href={demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes.link}
+            >
+              Live demo ↗
+            </a>
+          )}
+          {repoUrl && (
+            <a
+              href={repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${classes.link} ${classes["link--secondary"]}`}
+            >
+              Code ↗
+            </a>
+          )}
+        </div>
+      )}
+    </motion.article>
   );
 };
 

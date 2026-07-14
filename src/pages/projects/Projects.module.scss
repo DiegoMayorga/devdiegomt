@@ -13,36 +13,8 @@
 @media (min-width: 950px) {
   .cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr /* 1fr */;
-    grid-template-areas:
-      "p1 p2"
-      "p3 p4";
-      /* "p5 p6"; */
+    grid-template-columns: repeat(2, minmax(0, max-content));
+    justify-content: center;
+    align-items: stretch;
   }
 }
-
-.p1 {
-  grid-area: p1;
-}
-
-.p2 {
-  grid-area: p2;
-}
-
-.p3 {
-  grid-area: p3;
-}
-
-.p4 {
-  grid-area: p4;
-}
-
-/* .p5 {
-  grid-area: p5;
-}
-
-.p6 {
-  grid-area: p6;
-}
- */

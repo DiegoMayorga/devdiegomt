@@ -1,54 +1,77 @@
 .card {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  padding: 30px 30px 20px;
+  padding: 20px 20px 24px;
   margin: 20px;
   width: 370px;
-  min-height: 400px;
   border-radius: 15px;
   background-color: rgba($color: #c7c7c7, $alpha: 0.2);
 
   &:hover {
     background-color: rgba($color: #c7c7c7, $alpha: 0.3);
   }
+}
 
-  &__link {
-    display: flex;
-    justify-content: end;
+.cover {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.title {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.description {
+  flex-grow: 1;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #dfe4ee;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color: rgba($color: #c7c7c7, $alpha: 0.25);
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.links {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.link {
+  padding: 8px 14px;
+  border-radius: 8px;
+  background-color: #ffb829;
+  color: #0b1326;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    filter: brightness(1.1);
   }
 
-  .card__project-img {
-    width: 100px;
-    align-self: center;
-    margin-bottom: 25px;
-  }
-
-  .project-name {
-    margin-bottom: 15px;
-  }
-
-  .description {
-    height: 140px;
-  }
-
-  .tech {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: rgba($color: #c7c7c7, $alpha: 0.5);
-    align-self: center;
-    width: auto;
-    border-radius: 10px;
-    display: flex;
-    bottom: 0;
-
-    li {
-      list-style: none;
-    }
-
-    img {
-      width: 30px;
-      margin: 0 10px;
-    }
+  &--secondary {
+    background-color: transparent;
+    border: 1.5px solid #ffb829;
+    color: #ffb829;
   }
 }

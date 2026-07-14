@@ -9,15 +9,15 @@ export default function ProjectsPage() {
       <h1 className={classes.title}>Projects</h1>
       <div className={classes.cards}>
         {PROJECT_ITEMS.map((project) => (
-          <div key={project.id} className={classes[project.id]}>
-            <ProjectCard
-              image={project.image}
-              title={project.title}
-              description={project.description}
-              technologies={project.technologies}
-              link={project.link}
-            />
-          </div>
+          <ProjectCard
+            key={project.id}
+            image={project.image}
+            title={project.title}
+            description={project.description}
+            stack={project.stack}
+            demoUrl={project.demoUrl}
+            repoUrl={project.repoUrl}
+          />
         ))}
       </div>
     </section>
