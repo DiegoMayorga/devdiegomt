@@ -7,61 +7,56 @@ describe("ProjectCard", () => {
     image: "/project-image.png",
     title: "Sample Project",
     description: "This is a sample project.",
-    technologies: [
-      {
-        id: "react",
-        name: "React",
-        logo: "/react-logo.png",
-        title: "React Library",
-      },
-      {
-        id: "typescript",
-        name: "TypeScript",
-        logo: "/ts-logo.png",
-        title: "TypeScript Language",
-      },
-    ],
-    link: "https://example.com",
+    stack: ["React", "TypeScript"],
+    demoUrl: "https://example.com",
+    repoUrl: "https://github.com/example/repo",
   };
 
-  test("renders project title, description and image", () => {
+  test("renders project title, description and cover image", () => {
     render(<ProjectCard {...mockProps} />);
 
     expect(
       screen.getByRole("heading", { name: /sample project/i })
     ).toBeInTheDocument();
     expect(screen.getByText(/this is a sample project\./i)).toBeInTheDocument();
-    expect(screen.getByAltText(/sample project/i)).toHaveAttribute(
+    expect(screen.getByAltText(/sample project screenshot/i)).toHaveAttribute(
       "src",
       mockProps.image
     );
   });
 
-  test("renders all technology logos", () => {
+  test("renders every stack chip", () => {
     render(<ProjectCard {...mockProps} />);
 
-    mockProps.technologies.forEach((tech) => {
-      const techImg = screen.getByAltText(tech.name);
-      expect(techImg).toBeInTheDocument();
-      expect(techImg).toHaveAttribute("src", tech.logo);
-      expect(techImg).toHaveAttribute("title", tech.title);
-    });
+    for (const tech of mockProps.stack) {
+      expect(screen.getByText(tech)).toBeInTheDocument();
+    }
   });
 
-  test("renders links (icon and image) with correct href and security attributes", () => {
+  test("renders demo and repo links with correct href and security attributes", () => {
     render(<ProjectCard {...mockProps} />);
 
-    const links = screen.getAllByRole("link");
-    expect(links).toHaveLength(2);
-    for (const link of links) {
-      expect(link).toHaveAttribute("href", mockProps.link);
+    const demo = screen.getByRole("link", { name: /live demo/i });
+    const repo = screen.getByRole("link", { name: /code/i });
+
+    expect(demo).toHaveAttribute("href", mockProps.demoUrl);
+    expect(repo).toHaveAttribute("href", mockProps.repoUrl);
+    for (const link of [demo, repo]) {
       expect(link).toHaveAttribute("target", "_blank");
       expect(link).toHaveAttribute("rel", "noopener noreferrer");
     }
   });
 
-  test("renders no links when the project has no live URL", () => {
-    render(<ProjectCard {...mockProps} link="" />);
+  test("hides the links row when there is no demo or repo URL", () => {
+    render(<ProjectCard {...mockProps} demoUrl="" repoUrl="" />);
     expect(screen.queryByRole("link")).not.toBeInTheDocument();
+  });
+
+  test("renders only the demo link when repo is missing", () => {
+    render(<ProjectCard {...mockProps} repoUrl="" />);
+    expect(screen.getByRole("link", { name: /live demo/i })).toBeInTheDocument();
+    expect(
+      screen.queryByRole("link", { name: /code/i })
+    ).not.toBeInTheDocument();
   });
 });
