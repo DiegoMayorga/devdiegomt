@@ -1,68 +1,71 @@
-# 🚀 Mi Portafolio - React + TypeScript
+# devdiegomt — Personal Portfolio
 
-Este es el código fuente de mi portafolio profesional, desarrollado con **React**, **TypeScript** y **React Router DOM**. Aquí muestro mis proyectos, experiencia y habilidades en desarrollo de software.
+Source code for my portfolio: [devdiegomt.vercel.app](https://devdiegomt.vercel.app)
 
-## 📌 Tecnologías Utilizadas
+Built with **React 19**, **TypeScript**, **Vite** and **SCSS Modules**, following **Atomic Design** (atoms → molecules → organisms → pages) with unit and component tests in **Vitest + React Testing Library**.
 
-- **React** - Biblioteca para construir interfaces de usuario.
-- **TypeScript** - Superset de JavaScript con tipado estático.
-- **React Router DOM** - Manejo de rutas y navegación dentro de la aplicación.
-- **Styled Components / Tailwind CSS** *(opcional)* - Para estilización.
-- **Vite** *(opcional)* - Como herramienta de construcción y desarrollo.
+## Tech stack
 
-## 📂 Estructura del Proyecto
+- **React 19 + TypeScript** — UI and static typing
+- **Vite** — build tool and dev server (SWC plugin)
+- **React Router DOM 7** — client-side routing
+- **SCSS Modules** — scoped styling
+- **Framer Motion** — animations
+- **Formspree** — contact form backend
+- **Vitest + React Testing Library** — test suite
+- **Vercel** — hosting and analytics
+
+## Project structure
 
 ```
-📦 mi-portafolio
-├── 📂 src
-│   ├── 📂 components   # Componentes reutilizables
-│   ├── 📂 pages        # Páginas principales del sitio
-│   ├── 📂 assets       # Imágenes, iconos, etc.
-│   ├── 📂 styles       # Estilos globales
-│   ├── 📂 router       # Configuración de rutas
-│   ├── main.tsx        # Punto de entrada principal
-│   ├── App.tsx         # Componente raíz
-├── 📜 package.json     # Dependencias y scripts
-├── 📜 tsconfig.json    # Configuración de TypeScript
-├── 📜 README.md        # Documentación del proyecto
+src/
+├── assets/          # Images, icons, CV
+├── components/      # Atomic Design
+│   ├── atoms/       # Input
+│   ├── molecules/   # NavItem, Social, Quotes, Experience, Education, Certifications
+│   └── organisms/   # MainNavigation, Profile, ProjectCard
+├── config/          # Data separated from UI (projects, profile, navigation, socials)
+├── hooks/           # useDailyQuote
+├── pages/           # Home, Projects, CV, Contact, Error
+├── App.tsx          # Router configuration
+└── main.tsx         # Entry point
 ```
 
-## 📦 Instalación y Configuración
+## Routes
 
-1. **Clonar el repositorio**
-   ```bash
-   git clone https://github.com/diegomayorga/devdiegomt.git
-   cd devdiegomt
-   ```
+| Route       | Description       |
+| ----------- | ----------------- |
+| `/`         | Home / profile    |
+| `/projects` | Featured projects |
+| `/cv`       | Downloadable CV   |
+| `/contact`  | Contact form      |
 
-2. **Instalar dependencias**
-   ```bash
-   npm install
-   ```
+## Getting started
 
-3. **Ejecutar en modo desarrollo**
-   ```bash
-   npm run dev
-   ```
+```bash
+git clone https://github.com/DiegoMayorga/devdiegomt.git
+cd devdiegomt
+npm install
+npm run dev
+```
 
-4. **Construir para producción**
-   ```bash
-   npm run build
-   ```
+Other scripts:
 
-## 🌐 Rutas Principales
+```bash
+npm test         # run the test suite (Vitest)
+npm run lint     # ESLint
+npm run build    # type-check + production build
+npm run preview  # preview the production build
+```
 
-| Ruta        | Descripción |
-|------------|------------|
-| `/`        | Página de inicio |
-| `/about`   | Sobre mí |
-| `/projects` | Mis proyectos |
-| `/contact`  | Formulario de contacto |
+## Environment variables
 
-## 📌 Próximas Mejoras
+| Variable    | Purpose                    |
+| ----------- | -------------------------- |
+| `VITE_FORM` | Formspree form ID (contact page) |
 
-- Agregar **animaciones** para una mejor experiencia de usuario.
-- Optimizar **SEO** y accesibilidad.
-- Implementar **modo oscuro**.
+Create a `.env` file at the project root (see `.gitignore` — it is never committed).
 
-💡 **¿Tienes algún comentario o sugerencia?** ¡Contáctame en [Gmail](mailto:devdiegomt@gmail.com)!
+## Contact
+
+Found a bug or have a suggestion? Reach me at [devdiegomt@gmail.com](mailto:devdiegomt@gmail.com)
