@@ -9,7 +9,10 @@ export default function Profile() {
   return (
     <div className={classes.profile}>
       <h1>Professional Profile</h1>
-      <p>Software engineer</p>
+      <p>
+        Full-stack web developer — React, TypeScript &amp; Node.js. Software
+        Engineer (B.S., 2024).
+      </p>
       <hr />
       <h3>Education</h3>
       <div className={classes.edu}>

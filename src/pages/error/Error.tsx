@@ -5,8 +5,8 @@ export default function ErrorPage() {
     <>
       <MainNavigation />
       <main>
-        <h1>Error...</h1>
-        <p>An error ocurred, the page doesn't exist</p>
+        <h1>Page not found</h1>
+        <p>An error occurred or the page doesn't exist.</p>
       </main>
     </>
   );

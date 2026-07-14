@@ -1,7 +1,6 @@
 import cintelLogo from "../assets/work/cintel.png";
 import nttLogo from "../assets/work/ntt.png";
 import glaLogo from "../assets/work/gla.png";
-import freelanceLogo from "../assets/work/freelance.png";
 
 import aecLogo from "../assets/certificates/aec.png";
 import microsoftLogo from "../assets/certificates/microsoft.png";
@@ -26,35 +25,27 @@ export const EDUCATION = [
 export const EXPERIENCE = [
     {
         id: "x1",
-        img: freelanceLogo,
-        name: "Freelance",
-        period: "Nov. 2024 - Current",
-        role: "Fullstack developer",
-        skills: "React, TS, NextJS, MongoDB",
+        img: glaLogo,
+        name: "Gimnasio Los Arrayanes Bilingüe",
+        period: "May. 2023 - Present",
+        role: "Bilingual IT Teacher (Programming & Robotics)",
+        skills: "Python, Web Development, AI, Robotics",
     },
     {
         id: "x2",
-        img: glaLogo,
-        name: "GLAB",
-        period: "May. 2023 - Nov. 2024",
-        role: "Bilingual Technology Teacher",
-        skills: "HTML, CSS, JS",
-    },
-    {
-        id: "x3",
         img: nttLogo,
         name: "NTT DATA",
         period: "Aug. 2022 - Feb. 2023",
-        role: "Front end developer intern",
-        skills: "React, Material UI, Atomic Design",
+        role: "Web & Mobile Development Intern",
+        skills: "React, Ionic, Atomic Design, BEM, Scrum",
     },
     {
-        id: "x4",
+        id: "x3",
         img: cintelLogo,
         name: "CINTEL",
-        period: "Nov. 2021 - Aug. 2022",
-        role: "Professional technician",
-        skills: "Teamwork, Leadership",
+        period: "Jul. 2021 - Aug. 2022",
+        role: "Mobile Device Homologation Technician",
+        skills: "Project Leadership, Technical Documentation",
     },
 ];
 

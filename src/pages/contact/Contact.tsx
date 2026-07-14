@@ -7,7 +7,7 @@ export default function ContactPage() {
   const [state, handleSubmit] = useForm(`${import.meta.env.VITE_FORM}`);
 
   if (state.succeeded) {
-    return <p>¡Gracias por enviar tu mensaje!</p>;
+    return <p>Thanks for your message! I'll get back to you soon.</p>;
   }
 
   return (
