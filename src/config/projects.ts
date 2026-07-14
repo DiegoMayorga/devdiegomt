@@ -17,7 +17,7 @@ import framerLogo from "../assets/techs/framer.png";
 import firebaseLogo from "../assets/techs/firebase.png";
 import vitestLogo from "../assets/techs/vitest.svg";
 import expressLogo from "../assets/techs/express.png";
-import nodeLogo from "../assets/techs/mongo.png";
+import mongoLogo from "../assets/techs/mongo.png";
 
 export const PROJECT_ITEMS = [
   {
@@ -41,9 +41,9 @@ export const PROJECT_ITEMS = [
       },
       {
         id: "t6",
-        name: "Node JS logo",
-        logo: nodeLogo,
-        title: "Node JS",
+        name: "MongoDB logo",
+        logo: mongoLogo,
+        title: "MongoDB",
       },
       {
         id: "t6-1",

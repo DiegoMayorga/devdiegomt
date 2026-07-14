@@ -1,71 +1,28 @@
-import { renderHook, waitFor } from "@testing-library/react";
-import { describe, test, expect, vi, beforeEach } from "vitest";
-import { useDailyQuoute } from "./useDailyQuote";
-
-const mockFetch = vi.fn();
-global.fetch = mockFetch;
+import { renderHook } from "@testing-library/react";
+import { describe, test, expect } from "vitest";
+import { useDailyQuote, getDailyQuote, QUOTES } from "./useDailyQuote";
 
 describe("useDailyQuote", () => {
-    beforeEach(() => {
-        vi.resetAllMocks();
+    test("returns a quote from the local pool", () => {
+        const { result } = renderHook(() => useDailyQuote());
+        expect(QUOTES).toContainEqual(result.current.dailyQuote);
     });
 
-    test("starts with loading true", () => {
-        mockFetch.mockResolvedValueOnce({
-            ok: true,
-            json: () => Promise.resolve([{ quote: "Test quote", author: "Tester" }]),
-        });
+    test("is deterministic for a given date", () => {
+        const date = new Date("2026-07-14T10:00:00Z");
+        expect(getDailyQuote(date)).toEqual(getDailyQuote(date));
+    });
 
-        const { result } = renderHook(() => useDailyQuoute());
+    test("rotates through the pool on consecutive days", () => {
+        const day1 = getDailyQuote(new Date("2026-07-14T10:00:00Z"));
+        const day2 = getDailyQuote(new Date("2026-07-15T10:00:00Z"));
+        expect(day1).not.toEqual(day2);
+    });
 
-        expect(result.current.loading).toBe(true);
-        expect(result.current.dailyQuote).toBeNull();
-        expect(result.current.error).toBeNull();
-    })
-
-    test("fetches and sets quote successfully", async () => {
-        mockFetch.mockResolvedValueOnce({
-            ok: true,
-            json: () => Promise.resolve([{ quote: "Success quote", author: "Author Name" }]),
-        })
-
-        const { result } = renderHook(() => useDailyQuoute());
-
-        await waitFor(() => {
-            expect(result.current.loading).toBe(false);
-        });
-
-        expect(result.current.dailyQuote).toEqual({ quote: "Success quote", author: "Author Name" });
-        expect(result.current.error).toBeNull();
-    })
-
-    test("handles fetch error correctly", async () => {
-        mockFetch.mockResolvedValueOnce({
-            ok: false,
-        });
-
-        const { result } = renderHook(() => useDailyQuoute());
-
-        await waitFor(
-            () => {
-                expect(result.current.loading).toBe(false);
-            }
-        );
-
-        expect(result.current.dailyQuote).toBeNull();
-        expect(result.current.error).toBe("Error fetching quote");
-    })
-
-    test("handles network failure", async () => {
-        mockFetch.mockRejectedValueOnce(new Error("Network error"));
-
-        const { result } = renderHook(() => useDailyQuoute());
-
-        await waitFor(() => {
-            expect(result.current.loading).toBe(false);
-        });
-
-        expect(result.current.dailyQuote).toBeNull();
-        expect(result.current.error).toBe("Network error");
+    test("every quote in the pool has text and author", () => {
+        for (const q of QUOTES) {
+            expect(q.quote.length).toBeGreaterThan(0);
+            expect(q.author.length).toBeGreaterThan(0);
+        }
     });
 });

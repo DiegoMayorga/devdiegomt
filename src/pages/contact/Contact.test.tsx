@@ -1,8 +1,25 @@
 import { render, screen } from "@testing-library/react";
-import { describe, expect } from "vitest";
+import { describe, test, expect, vi, beforeEach } from "vitest";
 import ContactPage from "./Contact";
 
+const mocks = vi.hoisted(() => ({
+  state: {
+    succeeded: false,
+    submitting: false,
+    errors: null as unknown,
+  },
+}));
+
+vi.mock("@formspree/react", () => ({
+  useForm: () => [mocks.state, vi.fn()],
+  ValidationError: () => null,
+}));
+
 describe("Contact component", () => {
+  beforeEach(() => {
+    mocks.state = { succeeded: false, submitting: false, errors: null };
+  });
+
   test("renders the Contact heading", () => {
     render(<ContactPage />);
     expect(
@@ -10,28 +27,28 @@ describe("Contact component", () => {
     ).toBeInTheDocument();
   });
 
-  test("renders the disabled message", () => {
+  test("renders all form fields as required", () => {
     render(<ContactPage />);
-    expect(
-      screen.getByText(/disabled\. send me an email\./i)
-    ).toBeInTheDocument();
+
+    expect(screen.getByLabelText(/name/i)).toBeRequired();
+    expect(screen.getByLabelText(/email/i)).toBeRequired();
+    expect(screen.getByLabelText(/message/i)).toBeRequired();
   });
 
-  test("renders all input fields as disabled", () => {
+  test("submit button is enabled when the form is not submitting", () => {
     render(<ContactPage />);
-
-    const nameInput = screen.getByLabelText(/name/i);
-    const emailInput = screen.getByLabelText(/email/i);
-    const messageInput = screen.getByLabelText(/message/i);
-
-    expect(nameInput).toBeDisabled();
-    expect(emailInput).toBeDisabled();
-    expect(messageInput).toBeDisabled();
+    expect(screen.getByRole("button", { name: /submit/i })).toBeEnabled();
   });
 
-  test("renders the submit button as disabled", () => {
+  test("submit button is disabled while submitting", () => {
+    mocks.state = { succeeded: false, submitting: true, errors: null };
     render(<ContactPage />);
-    const submitButton = screen.getByRole("button", { name: /submit/i });
-    expect(submitButton).toBeDisabled();
+    expect(screen.getByRole("button", { name: /submit/i })).toBeDisabled();
+  });
+
+  test("shows a success message after the form is submitted", () => {
+    mocks.state = { succeeded: true, submitting: false, errors: null };
+    render(<ContactPage />);
+    expect(screen.getByText(/thanks for your message/i)).toBeInTheDocument();
   });
 });
