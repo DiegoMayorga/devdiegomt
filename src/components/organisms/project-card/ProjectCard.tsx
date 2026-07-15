@@ -8,7 +8,7 @@ interface ProjectCardProps {
   description: string;
   stack: string[];
   demoUrl?: string;
-  repoUrl?: string;
+  repoUrls?: { label: string; url: string }[];
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -17,7 +17,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   stack,
   demoUrl,
-  repoUrl,
+  repoUrls = [],
 }) => {
   return (
     <motion.article
@@ -41,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </li>
         ))}
       </ul>
-      {(demoUrl || repoUrl) && (
+      {(demoUrl || repoUrls.length > 0) && (
         <div className={classes.links}>
           {demoUrl && (
             <a
@@ -53,16 +53,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               Live demo ↗
             </a>
           )}
-          {repoUrl && (
+          {repoUrls.map(({ label, url }) => (
             <a
-              href={repoUrl}
+              key={url}
+              href={url}
               target="_blank"
               rel="noopener noreferrer"
               className={`${classes.link} ${classes["link--secondary"]}`}
             >
-              Code ↗
+              {label} ↗
             </a>
-          )}
+          ))}
         </div>
       )}
     </motion.article>
