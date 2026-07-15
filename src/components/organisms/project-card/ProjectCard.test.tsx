@@ -9,7 +9,7 @@ describe("ProjectCard", () => {
     description: "This is a sample project.",
     stack: ["React", "TypeScript"],
     demoUrl: "https://example.com",
-    repoUrl: "https://github.com/example/repo",
+    repoUrls: [{ label: "Code", url: "https://github.com/example/repo" }],
   };
 
   test("renders project title, description and cover image", () => {
@@ -40,7 +40,7 @@ describe("ProjectCard", () => {
     const repo = screen.getByRole("link", { name: /code/i });
 
     expect(demo).toHaveAttribute("href", mockProps.demoUrl);
-    expect(repo).toHaveAttribute("href", mockProps.repoUrl);
+    expect(repo).toHaveAttribute("href", mockProps.repoUrls[0].url);
     for (const link of [demo, repo]) {
       expect(link).toHaveAttribute("target", "_blank");
       expect(link).toHaveAttribute("rel", "noopener noreferrer");
@@ -48,12 +48,12 @@ describe("ProjectCard", () => {
   });
 
   test("hides the links row when there is no demo or repo URL", () => {
-    render(<ProjectCard {...mockProps} demoUrl="" repoUrl="" />);
+    render(<ProjectCard {...mockProps} demoUrl="" repoUrls={[]} />);
     expect(screen.queryByRole("link")).not.toBeInTheDocument();
   });
 
   test("renders only the demo link when repo is missing", () => {
-    render(<ProjectCard {...mockProps} repoUrl="" />);
+    render(<ProjectCard {...mockProps} repoUrls={[]} />);
     expect(screen.getByRole("link", { name: /live demo/i })).toBeInTheDocument();
     expect(
       screen.queryByRole("link", { name: /code/i })

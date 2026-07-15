@@ -16,7 +16,7 @@ export default function ProjectsPage() {
             description={project.description}
             stack={project.stack}
             demoUrl={project.demoUrl}
-            repoUrl={project.repoUrl}
+            repoUrls={project.repoUrls}
           />
         ))}
       </div>
