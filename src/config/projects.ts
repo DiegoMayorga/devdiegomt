@@ -25,29 +25,6 @@ export type Project = {
 
 export const PROJECT_ITEMS: Project[] = [
   {
-    id: "carwash",
-    title: "Carwash SaaS",
-    description:
-      "Multi-tenant management platform for car wash businesses: billing, service and customer modules on a custom REST API. Migrated the entire codebase (84 files) from JavaScript to TypeScript with strict feature parity.",
-    stack: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL"],
-    image: carwashCover,
-    demoUrl: "", // Not deployed yet
-    repoUrls: [
-      { label: "Frontend", url: "https://github.com/devdiegomt/lavadero-front" },
-      { label: "Backend", url: "https://github.com/devdiegomt/lavadero-back" },
-    ],
-  },
-  {
-    id: "mamba",
-    title: "Mamba",
-    description:
-      "AI-powered personal coaching and habit-tracking PWA: OTP authentication, web push notifications (VAPID + cron jobs) and LLM-generated coaching messages on top of a 16-table database schema. Private codebase.",
-    stack: ["Next.js", "TypeScript", "Supabase", "Groq / Llama"],
-    image: mambaCover,
-    demoUrl: "",
-    repoUrls: [],
-  },
-  {
     id: "herin",
     title: "Herin",
     description:
@@ -65,6 +42,32 @@ export const PROJECT_ITEMS: Project[] = [
     stack: ["Astro 5", "Tailwind CSS 4", "MDX"],
     image: ifanidadoCover,
     demoUrl: "https://ifanidado.vercel.app/",
+    repoUrls: [],
+  },
+  {
+    id: "carwash",
+    title: "Carwash SaaS",
+    description:
+      "Multi-tenant management platform for car wash businesses: billing, service and customer modules on a custom REST API. Migrated the entire codebase (84 files) from JavaScript to TypeScript with strict feature parity.",
+    stack: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL"],
+    image: carwashCover,
+    demoUrl: "", // Not deployed yet
+    repoUrls: [
+      {
+        label: "Frontend",
+        url: "https://github.com/devdiegomt/lavadero-front",
+      },
+      { label: "Backend", url: "https://github.com/devdiegomt/lavadero-back" },
+    ],
+  },
+  {
+    id: "mamba",
+    title: "Mamba",
+    description:
+      "AI-powered personal coaching and habit-tracking PWA: OTP authentication, web push notifications (VAPID + cron jobs) and LLM-generated coaching messages on top of a 16-table database schema. Private codebase.",
+    stack: ["Next.js", "TypeScript", "Supabase", "Groq / Llama"],
+    image: mambaCover,
+    demoUrl: "",
     repoUrls: [],
   },
   {
