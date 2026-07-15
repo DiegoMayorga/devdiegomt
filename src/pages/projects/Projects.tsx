@@ -5,7 +5,7 @@ import classes from "./Projects.module.scss";
 
 export default function ProjectsPage() {
   return (
-    <section>
+    <section style={{ width: "100%" }}>
       <h1 className={classes.title}>Projects</h1>
       <div className={classes.cards}>
         {PROJECT_ITEMS.map((project) => (

@@ -1,5 +1,30 @@
-// Background
-$background-100: #000000;
-$background-200: #F37261;
-$background-300: #842CF2;
+// ---------------------------------------------
+// Design tokens — single source of truth
+// ---------------------------------------------
 
+// Base palette
+$bg-base: #000000;
+$glow-coral: #f37261;
+$glow-purple: #842cf2;
+$card-top: #2f3d59;
+$card-bottom: #0b1326;
+$accent: #ffb829;
+
+// Surfaces (frosted panels over the dark bg)
+$surface: rgba(#c7c7c7, 0.2);
+$surface-hover: rgba(#c7c7c7, 0.3);
+$surface-strong: rgba(#c7c7c7, 0.4);
+
+// Text
+$text-primary: #ffffff;
+$text-secondary: #aab4c8;
+
+// Layout
+$sidebar-width: 400px;
+$content-max: 1240px;
+$bp-desktop: 1024px;
+
+// Legacy aliases (kept so existing styles keep compiling)
+$background-100: $bg-base;
+$background-200: $glow-coral;
+$background-300: $glow-purple;

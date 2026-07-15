@@ -1,14 +1,16 @@
+@use "../../../variables" as *;
+
 .card {
   display: flex;
   flex-direction: column;
   padding: 20px 20px 24px;
-  margin: 20px;
-  width: 370px;
+  box-sizing: border-box;
+  width: 100%;
   border-radius: 15px;
-  background-color: rgba($color: #c7c7c7, $alpha: 0.2);
+  background-color: $surface;
 
   &:hover {
-    background-color: rgba($color: #c7c7c7, $alpha: 0.3);
+    background-color: $surface-hover;
   }
 }
 
@@ -45,7 +47,7 @@
 .chip {
   padding: 4px 10px;
   border-radius: 999px;
-  background-color: rgba($color: #c7c7c7, $alpha: 0.25);
+  background-color: rgba(#c7c7c7, 0.25);
   font-size: 0.78rem;
   white-space: nowrap;
 }
@@ -59,8 +61,8 @@
 .link {
   padding: 8px 14px;
   border-radius: 8px;
-  background-color: #ffb829;
-  color: #0b1326;
+  background-color: $accent;
+  color: $card-bottom;
   font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none;
@@ -71,7 +73,7 @@
 
   &--secondary {
     background-color: transparent;
-    border: 1.5px solid #ffb829;
-    color: #ffb829;
+    border: 1.5px solid $accent;
+    color: $accent;
   }
 }

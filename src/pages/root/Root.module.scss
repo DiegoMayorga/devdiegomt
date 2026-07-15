@@ -1,6 +1,33 @@
-.root {
+@use "../../variables" as *;
+
+.shell {
+  max-width: $content-max;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: $text-primary;
+}
+
+.content {
+  width: 100%;
   margin-top: 25px;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: $bp-desktop) {
+  .shell {
+    display: grid;
+    grid-template-columns: $sidebar-width minmax(0, 1fr);
+    gap: 40px;
+    align-items: start;
+  }
+
+  .content {
+    margin-top: 90px; // aligns with the identity card top (avatar overlap offset)
+    align-items: stretch;
+  }
 }
