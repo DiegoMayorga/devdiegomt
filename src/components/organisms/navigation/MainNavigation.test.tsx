@@ -51,7 +51,7 @@ describe("MainNavigation", () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByAltText(/profile image/i)).toHaveAttribute(
+    expect(screen.getByAltText(/diego mayorga/i)).toHaveAttribute(
       "src",
       expect.stringContaining("profile.png")
     );

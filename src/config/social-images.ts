@@ -14,7 +14,7 @@ export const SOCIAL_IMAGES = [
     id: "s2",
     image: githubImg,
     alt: "GitHub icon",
-    href: "https://github.com/diegomayorga",
+    href: "https://github.com/devdiegomt",
   },
   {
     id: "s3",

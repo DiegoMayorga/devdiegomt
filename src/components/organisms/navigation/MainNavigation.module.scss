@@ -1,127 +1,132 @@
+@use "../../../variables" as *;
+
 .header {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 90px; // room for the avatar overlap
+}
+
+.box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 14rem;
-  height: 362px;
+  width: 100%;
+  padding: 0 24px 24px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background: linear-gradient($card-top, $card-bottom);
+  color: $text-primary;
+  text-align: center;
+}
 
-  .box {
-    // updating to grid
-    border-radius: 15px;
-    height: 350px;
-    width: 370px;
-    background: linear-gradient(#2f3d59, #0b1326);
-    color: white;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
-    place-items: center;
-    grid-template-areas:
-      "bx1 p1 bx2"
-      "bx3 bx3 bx3"
-      "bx4 bx4 bx4"
-      "bx5 bx5 bx5";
+.avatarWrap {
+  margin-top: -90px;
 
-    .p1 {
-      grid-area: p1;
-      background: radial-gradient(
-          circle at top left,
-          #f37261 -15%,
-          transparent 33%
-        ),
-        linear-gradient(to top, #842cf2 -15%, transparent 15%) #000000;
-      background-attachment: fixed;
-      height: 100px;
-      width: 210px;
-      display: flex;
-      border-bottom-left-radius: 30px;
-      border-bottom-right-radius: 30px;
-      justify-content: center;
+  .avatar {
+    display: block;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+}
 
-      .profile {
-        img {
-          height: 190px;
-          /* width: 190px; */
-          border-radius: 30px;
-        }
-        position: absolute;
-        top: 125px;
-        border-radius: 30px;
-      }
+.name {
+  margin-top: 16px;
+  font-weight: 600;
+  font-size: x-large;
+}
+
+.handle {
+  color: $text-secondary;
+  font-size: 0.9rem;
+}
+
+.tagline {
+  margin-top: 14px;
+  font-size: 0.95rem;
+}
+
+.availability {
+  margin-top: 4px;
+  font-size: 0.82rem;
+  color: $text-secondary;
+}
+
+.cta {
+  margin-top: 18px;
+  padding: 10px 22px;
+  border-radius: 8px;
+  background-color: $accent;
+  color: $card-bottom;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
+
+.social {
+  display: flex;
+  margin-top: 10px;
+
+  .iconBckg {
+    background-color: rgb(217, 217, 217, 20%);
+    border-radius: 5px;
+    margin: 10px 10px 0;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(217, 217, 217, 25%);
     }
 
-    .bx3 {
-      height: 60px;
-      grid-area: bx3;
-      justify-items: center;
-
-      h2 {
-        margin-top: 14px;
-        font-weight: 600;
-        font-size: x-large;
-      }
+    img {
+      margin: 10px;
+      border-radius: 0;
+      width: 30px;
+      display: block;
     }
+  }
+}
 
-    .bx4 {
-      grid-area: bx4;
-      .social {
-        margin-top: 12px;
-        display: flex;
-        height: 72px;
+.list {
+  margin-top: 18px;
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+  padding: 0;
+  font-weight: 400;
+  font-size: medium;
 
-        .iconBckg {
-          background-color: rgb(217, 217, 217, 20%);
-          border-radius: 5px;
-          margin: 20px 10px 0;
-          cursor: pointer;
+  a {
+    text-decoration: none;
+    color: $text-primary;
+    padding: 4px 8px;
 
-          &:hover {
-            background-color: rgb(217, 217, 217, 25%);
-          }
-
-          img {
-            margin: 10px;
-            border-radius: 0;
-            width: 30px;
-          }
-        }
-      }
+    &:hover {
+      color: $accent;
     }
+  }
 
-    .bx5 {
-      grid-area: bx5;
-      height: 94px;
-      .list {
-        margin-top: 30px;
-        display: flex;
-        gap: 1rem;
-        list-style-type: none;
-        padding: 0;
+  .active-tab {
+    border: 1.5px solid $accent;
+    border-radius: 8px;
+  }
+}
 
-        font-weight: 400;
-        font-size: medium;
+.quote {
+  margin-top: 18px;
+  font-size: 0.8rem;
+  color: $text-secondary;
+  font-style: italic;
+}
 
-        a {
-          text-decoration: none;
-          color: white;
-
-          &:hover {
-            color: #ffb829;
-          }
-        }
-
-        .active-tab {
-          border: 1.5px solid #ffb829;
-          border-radius: 8px;
-        }
-      }
-    }
-
-    /* border-radius: 15px; */
-    /* position: relative; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
+@media (min-width: $bp-desktop) {
+  .header {
+    position: sticky;
+    top: 114px; // 24px de margen + 90px del avatar que sobresale
+    align-self: start;
   }
 }

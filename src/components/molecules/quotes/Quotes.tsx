@@ -16,7 +16,7 @@ const Quotes = () => {
           duration: 1,
         }}
       >
-        "{dailyQuote.quote}" - {dailyQuote.author}
+        <b>Random quote:</b> "{dailyQuote.quote}" - {dailyQuote.author}
       </motion.p>
     </div>
   );
