@@ -11,16 +11,15 @@ type CertificationsProps = {
 
 const Certifications: React.FC<CertificationsProps> = ({ crt }) => {
   return (
-    <li className={classes["crt-li"]}>
-      <img
-        className={classes["crt-img"]}
-        src={crt.img}
-        alt={`${crt.place} logo`}
-      />
-      <div className={classes["crt-content"]}>
-        <h4>{crt.name}</h4>
-        <p>{crt.place}</p>
-        <p>{crt.year}</p>
+    <li className={classes.item}>
+      <span className={classes.logoChip}>
+        <img src={crt.img} alt={`${crt.place} logo`} loading="lazy" />
+      </span>
+      <div className={classes.content}>
+        <h3 className={classes.title}>{crt.name}</h3>
+        <p className={classes.meta}>
+          {crt.place} · {crt.year}
+        </p>
       </div>
     </li>
   );

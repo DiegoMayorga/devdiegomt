@@ -1,62 +1,33 @@
 @use "../../../variables" as *;
 
 .profile {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 30px 30px 20px;
-  box-sizing: border-box;
-  margin-top: 48px;
   width: 100%;
-  max-width: 680px;
-  min-height: 400px;
-  border-radius: 15px;
-  background-color: $surface;
-
-  hr {
-    margin-top: 20px;
-  }
-
-  h3 {
-    margin: 20px 0 0;
-  }
-  
-  .edu {
-    display: flex;
-    align-items: center;
-    margin: 30px 0 20px;
-    background-color: $surface-strong;
-    border-radius: 15px;
-    padding: 15px 0;
-
-    .umb-img {
-      width: 120px;
-      margin: 0 5px;
-    }
-
-    ul {
-      padding-left: 0;
-      list-style-type: none;
-
-      li:first-of-type {
-        margin-bottom: 20px;
-      }
-    }
-
-    &:hover {
-      background-color: $surface-hover;
-    }
-  }
-
-  .experience {
-    margin-top: 10px;
-    padding-left: 0;
-    list-style-type: none;
-  }
-
-  .certifications {
-    padding-left: 0;
-    list-style-type: none;
-  }
+  margin-top: 48px;
 }
 
+.sectionTitle {
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+}
+
+.experience,
+.education,
+.certifications {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.columns {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+
+@media (min-width: $bp-desktop) {
+  .columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}

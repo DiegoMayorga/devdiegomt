@@ -1,48 +1,138 @@
-.contact {
-  width: 370px;
+@use "../../variables" as *;
 
-  h1 {
-    justify-self: center;
-    margin-bottom: 25px;
+.page {
+  width: 100%;
+  max-width: 960px;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.form {
+  padding: 24px;
+  border-radius: 15px;
+  background-color: $surface;
+  box-sizing: border-box;
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 8px 0 4px;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 0.95rem;
   }
 
-  .form {
-    margin-bottom: 20px;
+  textarea {
+    min-height: 150px;
+    max-height: 260px;
+    resize: vertical;
+  }
+}
 
-    input {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      border-radius: 8px;
-      box-sizing: border-box;
+.actions {
+  margin-top: 14px;
+
+  button {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: $accent;
+    color: $card-bottom;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: default;
+    }
+  }
+}
+
+.direct {
+  padding: 24px;
+  border-radius: 15px;
+  background-color: $surface;
+  box-sizing: border-box;
+  align-self: start;
+
+  h2 {
+    font-size: 1.05rem;
+  }
+}
+
+.note {
+  margin-top: 8px;
+  font-size: 0.88rem;
+  color: $text-secondary;
+  line-height: 1.5;
+}
+
+.channels {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+
+  li + li {
+    margin-top: 8px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background-color: rgba(#c7c7c7, 0.12);
+    color: $text-primary;
+    text-decoration: none;
+    font-size: 0.9rem;
+
+    &:hover {
+      background-color: $surface-hover;
     }
 
-    textarea {
-      min-width: 370px;
-      max-width: 370px;
-      min-height: 150px;
-      max-height: 200px;
-      padding: 12px 20px;
-      margin: 8px 0;
-      border-radius: 8px;
-      box-sizing: border-box;
+    img {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
     }
+  }
+}
 
-    .form-actions {
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
+.location {
+  margin-top: 16px;
+  font-size: 0.82rem;
+  color: $text-secondary;
+}
 
-      button {
-        width: 100%;
-        padding: 12px 20px;
-        border-radius: 8px;
-        box-sizing: border-box;
-        background-color: #ffb829;
-        color: #000;
-        font-size: 16px;
-        cursor: pointer;
-      }
-    }
+.success {
+  padding: 40px 32px;
+  border-radius: 15px;
+  background-color: $surface;
+  text-align: center;
+
+  p {
+    margin-top: 8px;
+    color: $text-secondary;
+  }
+}
+
+@media (min-width: $bp-desktop) {
+  .grid {
+    grid-template-columns: 1.3fr 1fr;
+    align-items: start;
   }
 }

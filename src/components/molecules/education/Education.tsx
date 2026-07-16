@@ -1,3 +1,5 @@
+import classes from "./Education.module.scss";
+
 type EducationProps = {
   edu: {
     title: string;
@@ -8,10 +10,11 @@ type EducationProps = {
 
 const Education: React.FC<EducationProps> = ({ edu }) => {
   return (
-    <li>
-      <h4>{edu.title}</h4>
-      <p>{edu.place}</p>
-      <p>{edu.period}</p>
+    <li className={classes.item}>
+      <h3 className={classes.title}>{edu.title}</h3>
+      <p className={classes.meta}>
+        {edu.place} · {edu.period}
+      </p>
     </li>
   );
 };

@@ -1,33 +1,30 @@
 import classes from "./Experience.module.scss";
 
 type ExperienceProps = {
-    exp: {
-        img: string;
-        name: string;
-        period: string;
-        role: string;
-        skills: string;
-    }
+  exp: {
+    img: string;
+    name: string;
+    period: string;
+    role: string;
+    skills: string;
+  };
 };
 
 const Experience: React.FC<ExperienceProps> = ({ exp }) => {
   return (
-    <li className={classes["exp-li"]}>
-      <img
-        className={classes["work-img"]}
-        src={exp.img}
-        alt={`${exp.name} logo`}
-      />
-      <div className={classes["work-content"]}>
-        <h4>{exp.name}</h4>
-        <p>{exp.period}</p>
-        <p>{exp.role}</p>
-        <p>
-          <strong>Skills:</strong> {exp.skills}
+    <li className={classes.item}>
+      <span className={classes.logoChip}>
+        <img src={exp.img} alt={`${exp.name} logo`} loading="lazy" />
+      </span>
+      <div className={classes.content}>
+        <h3 className={classes.role}>{exp.role}</h3>
+        <p className={classes.meta}>
+          {exp.name} · {exp.period}
         </p>
+        <p className={classes.skills}>{exp.skills}</p>
       </div>
     </li>
   );
-}
+};
 
 export default Experience;

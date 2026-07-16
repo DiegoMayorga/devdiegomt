@@ -17,9 +17,7 @@ export type Project = {
   description: string;
   stack: string[];
   image: string;
-  /** Live site URL. Leave empty to hide the Demo button. */
   demoUrl: string;
-  /** Public repositories. Leave empty when the codebase is private. */
   repoUrls: RepoLink[];
 };
 
@@ -52,13 +50,7 @@ export const PROJECT_ITEMS: Project[] = [
     stack: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL"],
     image: carwashCover,
     demoUrl: "https://lavadero-front.vercel.app/", // Not deployed yet
-    repoUrls: [
-      {
-        label: "Frontend",
-        url: "https://github.com/devdiegomt/lavadero-front",
-      },
-      { label: "Backend", url: "https://github.com/devdiegomt/lavadero-back" },
-    ],
+    repoUrls: [],
   },
   {
     id: "mamba",

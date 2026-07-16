@@ -1,29 +1,48 @@
-.crt-li {
-  min-height: 170px;
-  justify-content: center;
-  padding: 15px;
-  background-color: rgba($color: #c7c7c7, $alpha: 0.4);
-  border-radius: 15px;
-  margin: 30px 0;
+@use "../../../variables" as *;
+
+.item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-
-  .crt-img {
-    width: 150px;
-    margin-bottom: 15px;
-  }
-
-  .crt-content {
-    margin-left: 10px;
-    align-items: center;
-  }
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background-color: $surface;
+  margin-bottom: 12px;
 
   &:hover {
-    background-color: rgba($color: #c7c7c7, $alpha: 0.3);
+    background-color: $surface-hover;
   }
+}
 
-  &:last-of-type {
-    margin-bottom: 10px;
+.logoChip {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 32px;
+    max-height: 32px;
+    object-fit: contain;
   }
+}
+
+.content {
+  min-width: 0;
+}
+
+.title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.meta {
+  margin-top: 2px;
+  font-size: 0.82rem;
+  color: $text-secondary;
 }

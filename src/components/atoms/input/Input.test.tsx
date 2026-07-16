@@ -26,11 +26,9 @@ describe("Input Component", () => {
     expect(input).toBeDisabled();
   });
 
-  test("input should have the correct placeholder", () => {
-    render(<Input label="Full Name" name="fullName" type="text" />);
-    const input = screen.getByPlaceholderText("Full Name");
-
-    expect(input).toBeInTheDocument();
+  test("renders the visible label text", () => {
+    render(<Input label="Email" name="email" type="email" />);
+    expect(screen.getByText("Email")).toBeInTheDocument();
   });
 
   test("renders input with correct type", () => {

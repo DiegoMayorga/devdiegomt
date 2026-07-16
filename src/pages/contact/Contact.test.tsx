@@ -35,15 +35,15 @@ describe("Contact component", () => {
     expect(screen.getByLabelText(/message/i)).toBeRequired();
   });
 
-  test("submit button is enabled when the form is not submitting", () => {
+  test("send button is enabled when the form is not submitting", () => {
     render(<ContactPage />);
-    expect(screen.getByRole("button", { name: /submit/i })).toBeEnabled();
+    expect(screen.getByRole("button", { name: /send message/i })).toBeEnabled();
   });
 
-  test("submit button is disabled while submitting", () => {
+  test("send button is disabled while submitting", () => {
     mocks.state = { succeeded: false, submitting: true, errors: null };
     render(<ContactPage />);
-    expect(screen.getByRole("button", { name: /submit/i })).toBeDisabled();
+    expect(screen.getByRole("button", { name: /send message/i })).toBeDisabled();
   });
 
   test("shows a success message after the form is submitted", () => {

@@ -19,7 +19,6 @@ const Input: React.FC<InputProps> = ({
   const inputProps = {
     id: name,
     name,
-    placeholder: label,
     disabled,
     required,
   };
