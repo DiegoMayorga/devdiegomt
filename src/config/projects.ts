@@ -31,7 +31,7 @@ export const PROJECT_ITEMS: Project[] = [
       "Multi-tenant management platform for car wash businesses: billing, service and customer modules on a custom REST API. Migrated the entire codebase (84 files) from JavaScript to TypeScript with strict feature parity.",
     stack: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL"],
     image: carwashCover,
-    demoUrl: "", // Not deployed yet
+    demoUrl: "https://lavadero-front.vercel.app/", // Not deployed yet
     repoUrls: [
       { label: "Frontend", url: "https://github.com/devdiegomt/lavadero-front" },
       { label: "Backend", url: "https://github.com/devdiegomt/lavadero-back" },
