@@ -1,10 +1,10 @@
 // Project covers (replace SVG placeholders with real screenshots when available)
-import carwashCover from "../assets/projects-images/carwash.svg";
+import carwashCover from "../assets/projects-images/carwash.png";
 import mambaCover from "../assets/projects-images/mamba.svg";
-import herinCover from "../assets/projects-images/herin.svg";
-import ifanidadoCover from "../assets/projects-images/ifanidado.svg";
-import mundoGatunoCover from "../assets/projects-images/mundo-gatuno.svg";
-import schoolCover from "../assets/projects-images/school.svg";
+import herinCover from "../assets/projects-images/herin.png";
+import ifanidadoCover from "../assets/projects-images/ifanidado.png";
+import mundoGatunoCover from "../assets/projects-images/mundo-gatuno.png";
+import schoolCover from "../assets/projects-images/school.png";
 
 export type RepoLink = {
   label: string;
@@ -33,16 +33,6 @@ export const PROJECT_ITEMS: Project[] = [
     repoUrls: [{ label: "Code", url: "https://github.com/devdiegomt/Herin" }],
   },
   {
-    id: "ifanidado",
-    title: "ifanidado.com",
-    description:
-      "Multilingual (ES/EN) educational content site built with Content Collections, covering five technical verticals: React, CSS, Python, Arduino and AI. 13+ published articles.",
-    stack: ["Astro 5", "Tailwind CSS 4", "MDX"],
-    image: ifanidadoCover,
-    demoUrl: "https://ifanidado.vercel.app/",
-    repoUrls: [],
-  },
-  {
     id: "carwash",
     title: "Carwash SaaS",
     description:
@@ -50,6 +40,16 @@ export const PROJECT_ITEMS: Project[] = [
     stack: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL"],
     image: carwashCover,
     demoUrl: "https://lavadero-front.vercel.app/", // Not deployed yet
+    repoUrls: [],
+  },
+  {
+    id: "ifanidado",
+    title: "ifanidado",
+    description:
+      "Multilingual (ES/EN) educational content site built with Content Collections, covering five technical verticals: React, CSS, Python, Arduino and AI. 13+ published articles.",
+    stack: ["Astro 5", "Tailwind CSS 4", "MDX"],
+    image: ifanidadoCover,
+    demoUrl: "https://ifanidado.vercel.app/",
     repoUrls: [],
   },
   {
