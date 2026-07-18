@@ -1,4 +1,5 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
+import { renderWithProviders } from "../../test-utils";
 import { describe, test, expect, vi, beforeEach } from "vitest";
 import ContactPage from "./Contact";
 
@@ -21,14 +22,14 @@ describe("Contact component", () => {
   });
 
   test("renders the Contact heading", () => {
-    render(<ContactPage />);
+    renderWithProviders(<ContactPage />);
     expect(
       screen.getByRole("heading", { name: /contact/i })
     ).toBeInTheDocument();
   });
 
   test("renders all form fields as required", () => {
-    render(<ContactPage />);
+    renderWithProviders(<ContactPage />);
 
     expect(screen.getByLabelText(/name/i)).toBeRequired();
     expect(screen.getByLabelText(/email/i)).toBeRequired();
@@ -36,19 +37,19 @@ describe("Contact component", () => {
   });
 
   test("send button is enabled when the form is not submitting", () => {
-    render(<ContactPage />);
+    renderWithProviders(<ContactPage />);
     expect(screen.getByRole("button", { name: /send message/i })).toBeEnabled();
   });
 
   test("send button is disabled while submitting", () => {
     mocks.state = { succeeded: false, submitting: true, errors: null };
-    render(<ContactPage />);
+    renderWithProviders(<ContactPage />);
     expect(screen.getByRole("button", { name: /send message/i })).toBeDisabled();
   });
 
   test("shows a success message after the form is submitted", () => {
     mocks.state = { succeeded: true, submitting: false, errors: null };
-    render(<ContactPage />);
+    renderWithProviders(<ContactPage />);
     expect(screen.getByText(/thanks for your message/i)).toBeInTheDocument();
   });
 });

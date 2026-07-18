@@ -1,0 +1,25 @@
+@use "../../../variables" as *;
+
+.toggle {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  border-radius: 999px;
+  background-color: rgba(#c7c7c7, 0.15);
+
+  button {
+    padding: 4px 12px;
+    border: none;
+    border-radius: 999px;
+    background: transparent;
+    color: $text-secondary;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    &.active {
+      background-color: $accent;
+      color: $card-bottom;
+    }
+  }
+}

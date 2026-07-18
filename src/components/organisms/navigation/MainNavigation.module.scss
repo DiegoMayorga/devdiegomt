@@ -126,7 +126,15 @@
 @media (min-width: $bp-desktop) {
   .header {
     position: sticky;
-    top: 114px; // 24px de margen + 90px del avatar que sobresale
+    top: 114px;
     align-self: start;
   }
+}
+
+.topRow {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 12px;
+  padding-left: 20px;
 }

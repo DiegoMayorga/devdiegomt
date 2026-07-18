@@ -3,16 +3,18 @@ import classes from "./Contact.module.scss";
 import { motion } from "framer-motion";
 import { useForm, ValidationError } from "@formspree/react";
 import { SOCIAL_IMAGES } from "../../config/social-images";
+import { useTranslation } from "react-i18next";
 
 export default function ContactPage() {
+  const { t } = useTranslation();
   const [state, handleSubmit] = useForm(`${import.meta.env.VITE_FORM}`);
 
   if (state.succeeded) {
     return (
       <section className={classes.page}>
         <div className={classes.success}>
-          <h1>Thanks for your message!</h1>
-          <p>I'll get back to you soon.</p>
+          <h1>{t("contact.successTitle")}</h1>
+          <p>{t("contact.successBody")}</p>
         </div>
       </section>
     );
@@ -20,26 +22,36 @@ export default function ContactPage() {
 
   return (
     <section className={classes.page}>
-      <h1 className={classes.title}>Contact</h1>
+      <h1 className={classes.title}>{t("contact.title")}</h1>
       <div className={classes.grid}>
         <form
           className={classes.form}
           autoComplete="off"
           onSubmit={handleSubmit}
         >
-          <Input type="text" name="contactName" label="Name" required />
+          <Input
+            type="text"
+            name="contactName"
+            label={t("contact.name")}
+            required
+          />
           <ValidationError
             prefix="Name"
             field="contactName"
             errors={state.errors}
           />
-          <Input type="email" name="contactEmail" label="Email" required />
+          <Input
+            type="email"
+            name="contactEmail"
+            label={t("contact.email")}
+            required
+          />
           <ValidationError
             prefix="Email"
             field="contactEmail"
             errors={state.errors}
           />
-          <Input name="message" label="Message" textarea required />
+          <Input name="message" label={t("contact.message")} textarea required />
           <ValidationError
             prefix="Message"
             field="message"
@@ -51,17 +63,14 @@ export default function ContactPage() {
               type="submit"
               disabled={state.submitting}
             >
-              Send message
+              {t("contact.send")}
             </motion.button>
           </div>
         </form>
 
         <aside className={classes.direct}>
-          <h2>Prefer a direct channel?</h2>
-          <p className={classes.note}>
-            Recruiters and teams usually reach me here — I typically reply
-            within a day.
-          </p>
+          <h2>{t("contact.directTitle")}</h2>
+          <p className={classes.note}>{t("contact.directNote")}</p>
           <ul className={classes.channels}>
             {SOCIAL_IMAGES.map((social) => (
               <li key={social.id}>
@@ -72,9 +81,7 @@ export default function ContactPage() {
               </li>
             ))}
           </ul>
-          <p className={classes.location}>
-            Bogotá, Colombia (GMT-5) · Open to remote &amp; relocation
-          </p>
+          <p className={classes.location}>{t("contact.location")}</p>
         </aside>
       </div>
     </section>

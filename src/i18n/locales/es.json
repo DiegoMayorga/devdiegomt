@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "cv": "CV",
+    "contact": "Contacto"
+  },
+  "profile": {
+    "tagline": "Desarrollador web full-stack — React · TypeScript · Node.js",
+    "availability": "Bogotá, Colombia · Disponible para remoto y reubicación",
+    "downloadCv": "Descargar CV",
+    "quotePrefix": "Frase del día"
+  },
+  "home": {
+    "headline": "Construyo productos full-stack con React y TypeScript",
+    "lede": "Ingeniero de software desde Colombia. Desde plataformas SaaS multi-tenant hasta PWAs con IA — diseñados, construidos y desplegados de principio a fin.",
+    "featured": "Proyectos destacados",
+    "viewAll": "Ver todos →"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "liveDemo": "Ver demo ↗",
+    "code": "Código ↗"
+  },
+  "profileSection": {
+    "experience": "Experiencia",
+    "education": "Educación",
+    "certifications": "Certificaciones"
+  },
+  "cv": {
+    "title": "Currículum",
+    "blurb": "Una página, formato ATS, con enlaces directos a demos y repositorios.",
+    "downloadPdf": "Descargar PDF",
+    "viewBrowser": "Ver en el navegador ↗",
+    "atAGlance": "En resumen",
+    "highlights": [
+      "3 proyectos full-stack en producción (React, TypeScript, Node.js, Supabase)",
+      "Experiencia frontend en producto bancario en NTT DATA",
+      "Ingeniería de Software — Universidad Manuela Beltrán (2024)",
+      "Inglés B2 certificado · Español nativo"
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "name": "Nombre",
+    "email": "Correo",
+    "message": "Mensaje",
+    "send": "Enviar mensaje",
+    "successTitle": "¡Gracias por tu mensaje!",
+    "successBody": "Te responderé pronto.",
+    "directTitle": "¿Prefieres un canal directo?",
+    "directNote": "Reclutadores y equipos suelen contactarme aquí — normalmente respondo en un día.",
+    "location": "Bogotá, Colombia (GMT-5) · Disponible para remoto y reubicación"
+  },
+  "error": {
+    "title": "Página no encontrada",
+    "body": "Ocurrió un error o la página no existe.",
+    "back": "Volver al inicio"
+  }
+}

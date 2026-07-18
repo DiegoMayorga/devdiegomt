@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "cv": "CV",
+    "contact": "Contact"
+  },
+  "profile": {
+    "tagline": "Full-stack web developer — React · TypeScript · Node.js",
+    "availability": "Bogotá, Colombia · Open to remote & relocation",
+    "downloadCv": "Download CV",
+    "quotePrefix": "Random quote"
+  },
+  "home": {
+    "headline": "I build full-stack products with React & TypeScript",
+    "lede": "Software engineer from Colombia. From multi-tenant SaaS platforms to AI-powered PWAs — designed, built and shipped end-to-end.",
+    "featured": "Featured projects",
+    "viewAll": "View all →"
+  },
+  "projects": {
+    "title": "Projects",
+    "liveDemo": "Live demo ↗",
+    "code": "Code ↗"
+  },
+  "profileSection": {
+    "experience": "Experience",
+    "education": "Education",
+    "certifications": "Certifications"
+  },
+  "cv": {
+    "title": "Curriculum",
+    "blurb": "One page, ATS-friendly, with direct links to live demos and repositories.",
+    "downloadPdf": "Download PDF",
+    "viewBrowser": "View in browser ↗",
+    "atAGlance": "At a glance",
+    "highlights": [
+      "3 full-stack projects live in production (React, TypeScript, Node.js, Supabase)",
+      "Frontend experience on a banking product at NTT DATA",
+      "B.S. in Software Engineering — Universidad Manuela Beltrán (2024)",
+      "English B2 (certified) · Spanish native"
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send message",
+    "successTitle": "Thanks for your message!",
+    "successBody": "I'll get back to you soon.",
+    "directTitle": "Prefer a direct channel?",
+    "directNote": "Recruiters and teams usually reach me here — I typically reply within a day.",
+    "location": "Bogotá, Colombia (GMT-5) · Open to remote & relocation"
+  },
+  "error": {
+    "title": "Page not found",
+    "body": "An error occurred or the page doesn't exist.",
+    "back": "Back to home"
+  }
+}

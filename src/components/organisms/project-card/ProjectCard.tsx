@@ -1,24 +1,19 @@
 import React from "react";
 import classes from "./ProjectCard.module.scss";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { useLang } from "../../../i18n/useLang";
+import type { Project } from "../../../config/projects";
 
 interface ProjectCardProps {
-  image: string;
-  title: string;
-  description: string;
-  stack: string[];
-  demoUrl?: string;
-  repoUrls?: { label: string; url: string }[];
+  project: Project;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({
-  image,
-  title,
-  description,
-  stack,
-  demoUrl,
-  repoUrls = [],
-}) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  const { t } = useTranslation();
+  const lang = useLang();
+  const { image, title, description, stack, demoUrl, repoUrls } = project;
+
   return (
     <motion.article
       whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
@@ -33,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         loading="lazy"
       />
       <h2 className={classes.title}>{title}</h2>
-      <p className={classes.description}>{description}</p>
+      <p className={classes.description}>{description[lang]}</p>
       <ul className={classes.stack} aria-label={`${title} tech stack`}>
         {stack.map((tech) => (
           <li key={tech} className={classes.chip}>
@@ -50,7 +45,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               rel="noopener noreferrer"
               className={classes.link}
             >
-              Live demo ↗
+              {t("projects.liveDemo")}
             </a>
           )}
           {repoUrls.map(({ label, url }) => (

@@ -1,44 +1,41 @@
 import classes from "./CV.module.scss";
-import myCV from "../../assets/cv/DiegoMayorgaCV.pdf";
 import cvIcon from "../../assets/cv/cv.png";
-
-const HIGHLIGHTS = [
-  "4 end-to-end full-stack projects (React, TypeScript, Node.js, Supabase)",
-  "Frontend experience on a banking product at NTT DATA",
-  "B.S. in Software Engineering — Universidad Manuela Beltrán (2024)",
-  "English B2 (certified) · Spanish native",
-];
+import { CV_FILES } from "../../config/cv-files";
+import { useTranslation } from "react-i18next";
+import { useLang } from "../../i18n/useLang";
 
 export default function CV() {
+  const { t } = useTranslation();
+  const lang = useLang();
+  const cvFile = CV_FILES[lang];
+  const highlights = t("cv.highlights", { returnObjects: true }) as string[];
+
   return (
     <section className={classes.page}>
-      <h1 className={classes.title}>Curriculum</h1>
+      <h1 className={classes.title}>{t("cv.title")}</h1>
       <div className={classes.grid}>
         <div className={classes.card}>
           <img className={classes.icon} src={cvIcon} alt="" aria-hidden="true" />
-          <p className={classes.blurb}>
-            One page, ATS-friendly, with direct links to live demos and
-            repositories.
-          </p>
+          <p className={classes.blurb}>{t("cv.blurb")}</p>
           <div className={classes.actions}>
-            <a href={myCV} download className={classes.primary}>
-              Download PDF
+            <a href={cvFile} download className={classes.primary}>
+              {t("cv.downloadPdf")}
             </a>
             <a
-              href={myCV}
+              href={cvFile}
               target="_blank"
               rel="noopener noreferrer"
               className={classes.secondary}
             >
-              View in browser ↗
+              {t("cv.viewBrowser")}
             </a>
           </div>
         </div>
 
         <div className={classes.card}>
-          <h2 className={classes.subtitle}>At a glance</h2>
+          <h2 className={classes.subtitle}>{t("cv.atAGlance")}</h2>
           <ul className={classes.highlights}>
-            {HIGHLIGHTS.map((item) => (
+            {highlights.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
