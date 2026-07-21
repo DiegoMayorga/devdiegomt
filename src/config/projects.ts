@@ -41,18 +41,6 @@ export const PROJECT_ITEMS: Project[] = [
     ],
   },
   {
-    id: "herin",
-    title: "Herin",
-    description: {
-      en: "Dynamic product catalog with a full-CRUD admin panel, per-product image galleries and row-level security: public reads for active products, authenticated writes.",
-      es: "Catálogo de productos dinámico con panel de administración (CRUD completo), galería de imágenes por producto y seguridad a nivel de fila (RLS): lectura pública, escritura autenticada.",
-    },
-    stack: ["React 19", "Vite", "Tailwind CSS 4", "Supabase"],
-    image: herinCover,
-    demoUrl: "https://herinoficial.vercel.app/",
-    repoUrls: [{ label: "Code", url: "https://github.com/devdiegomt/Herin" }],
-  },
-  {
     id: "ifanidado",
     title: "ifanidado",
     description: {
@@ -63,6 +51,18 @@ export const PROJECT_ITEMS: Project[] = [
     image: ifanidadoCover,
     demoUrl: "https://ifanidado.vercel.app/",
     repoUrls: [],
+  },
+  {
+    id: "herin",
+    title: "Herin",
+    description: {
+      en: "Dynamic product catalog with a full-CRUD admin panel, per-product image galleries and row-level security: public reads for active products, authenticated writes.",
+      es: "Catálogo de productos dinámico con panel de administración (CRUD completo), galería de imágenes por producto y seguridad a nivel de fila (RLS): lectura pública, escritura autenticada.",
+    },
+    stack: ["React 19", "Vite", "Tailwind CSS 4", "Supabase"],
+    image: herinCover,
+    demoUrl: "https://herinoficial.vercel.app/",
+    repoUrls: [{ label: "Code", url: "https://github.com/devdiegomt/Herin" }],
   },
   {
     id: "margen",
