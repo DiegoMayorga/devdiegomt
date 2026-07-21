@@ -71,7 +71,7 @@ export const PROJECT_ITEMS: Project[] = [
       en: "A personal app for saving the most important takeaways from the books you read: key ideas, highlighted quotes, and personal reflections, plus a reading list of books you want to read.",
       es: "App personal para guardar lo más importante de los libros que lees: ideas, citas resaltadas y reflexiones, más una lista de pendientes de lectura.",
     },
-    stack: ["Astro 5", "Tailwind CSS 4", "MDX"],
+    stack: ["React", "Supabase", "Typescript"],
     image: margenCover,
     demoUrl: "https://margen-page.vercel.app/",
     repoUrls: [],
