@@ -4,6 +4,7 @@ import herinCover from "../assets/projects-images/herin.png";
 import ifanidadoCover from "../assets/projects-images/ifanidado.png";
 import mundoGatunoCover from "../assets/projects-images/mundo-gatuno.png";
 import schoolCover from "../assets/projects-images/school.png";
+import margenCover from "../assets/projects-images/margen.png";
 import type { Lang } from "../i18n/config";
 
 export type RepoLink = {
@@ -53,7 +54,7 @@ export const PROJECT_ITEMS: Project[] = [
   },
   {
     id: "ifanidado",
-    title: "ifanidado.com",
+    title: "ifanidado",
     description: {
       en: "Multilingual (ES/EN) educational content site built with Content Collections, covering five technical verticals: React, CSS, Python, Arduino and AI. 13+ published articles.",
       es: "Sitio de contenido educativo multilingüe (ES/EN) construido con Content Collections, cubriendo cinco verticales técnicas: React, CSS, Python, Arduino e IA. 13+ artículos publicados.",
@@ -61,6 +62,18 @@ export const PROJECT_ITEMS: Project[] = [
     stack: ["Astro 5", "Tailwind CSS 4", "MDX"],
     image: ifanidadoCover,
     demoUrl: "https://ifanidado.vercel.app/",
+    repoUrls: [],
+  },
+  {
+    id: "margen",
+    title: "margen",
+    description: {
+      en: "A personal app for saving the most important takeaways from the books you read: key ideas, highlighted quotes, and personal reflections, plus a reading list of books you want to read.",
+      es: "App personal para guardar lo más importante de los libros que lees: ideas, citas resaltadas y reflexiones, más una lista de pendientes de lectura.",
+    },
+    stack: ["Astro 5", "Tailwind CSS 4", "MDX"],
+    image: margenCover,
+    demoUrl: "https://margen.vercel.app/",
     repoUrls: [],
   },
   {
