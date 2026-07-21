@@ -41,18 +41,6 @@ export const PROJECT_ITEMS: Project[] = [
     ],
   },
   {
-    id: "ifanidado",
-    title: "ifanidado",
-    description: {
-      en: "Multilingual (ES/EN) educational content site built with Content Collections, covering five technical verticals: React, CSS, Python, Arduino and AI. 13+ published articles.",
-      es: "Sitio de contenido educativo multilingüe (ES/EN) construido con Content Collections, cubriendo cinco verticales técnicas: React, CSS, Python, Arduino e IA. 13+ artículos publicados.",
-    },
-    stack: ["Astro 5", "Tailwind CSS 4", "MDX"],
-    image: ifanidadoCover,
-    demoUrl: "https://ifanidado.vercel.app/",
-    repoUrls: [],
-  },
-  {
     id: "herin",
     title: "Herin",
     description: {
@@ -74,6 +62,18 @@ export const PROJECT_ITEMS: Project[] = [
     stack: ["React", "Supabase", "Typescript"],
     image: margenCover,
     demoUrl: "https://margen-page.vercel.app/",
+    repoUrls: [],
+  },
+    {
+    id: "ifanidado",
+    title: "ifanidado",
+    description: {
+      en: "Multilingual (ES/EN) educational content site built with Content Collections, covering five technical verticals: React, CSS, Python, Arduino and AI. 13+ published articles.",
+      es: "Sitio de contenido educativo multilingüe (ES/EN) construido con Content Collections, cubriendo cinco verticales técnicas: React, CSS, Python, Arduino e IA. 13+ artículos publicados.",
+    },
+    stack: ["Astro 5", "Tailwind CSS 4", "MDX"],
+    image: ifanidadoCover,
+    demoUrl: "https://ifanidado.vercel.app/",
     repoUrls: [],
   },
   {
