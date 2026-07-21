@@ -73,7 +73,7 @@ export const PROJECT_ITEMS: Project[] = [
     },
     stack: ["Astro 5", "Tailwind CSS 4", "MDX"],
     image: margenCover,
-    demoUrl: "https://margen.vercel.app/",
+    demoUrl: "https://margen-page.vercel.app/",
     repoUrls: [],
   },
   {
