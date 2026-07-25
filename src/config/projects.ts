@@ -5,6 +5,7 @@ import ifanidadoCover from "../assets/projects-images/ifanidado.png";
 import mundoGatunoCover from "../assets/projects-images/mundo-gatuno.png";
 import schoolCover from "../assets/projects-images/school.png";
 import margenCover from "../assets/projects-images/margen.png";
+import presupuestoCover from "../assets/projects-images/presupuesto.png";
 import type { Lang } from "../i18n/config";
 
 export type RepoLink = {
@@ -62,6 +63,18 @@ export const PROJECT_ITEMS: Project[] = [
     stack: ["React", "Supabase", "Typescript"],
     image: margenCover,
     demoUrl: "https://margen-page.vercel.app/",
+    repoUrls: [],
+  },
+  {
+    id: "presupuesto",
+    title: "Presupuesto",
+    description: {
+      en: "Web application for managing budgets, credit and debit accounts, and organizing transactions by categories and subcategories.",
+      es: "Aplicación web para gestionar presupuestos, cuentas de crédito y débito, y organizar movimientos por categorías y subcategorías.",
+    },
+    stack: ["React", "TypeScript", "Vite", "Tailwind CSS 4", "Dexie.js"],
+    image: presupuestoCover,
+    demoUrl: "https://presupuesto-page.vercel.app/",
     repoUrls: [],
   },
     {
